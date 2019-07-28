@@ -1,17 +1,11 @@
 package yz.acceleratormod;
 
-import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import cpw.mods.fml.common.gameevent.InputEvent;
-import cpw.mods.fml.common.network.NetworkRegistry;
-import cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.relauncher.Side;
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
@@ -22,21 +16,18 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.EnumHelper;
 import org.lwjgl.input.Keyboard;
+import yz.acceleratormod.keymgr.KeyManager;
 
 @Mod(modid = "AcceleratorMod", name = "Accelerator Mod", version = "19.07.14")
 public class AcceleratorMod {
     public static Item choker;
     public static Item battery;
 
-    public static final KeyBinding chokerButton = new KeyBinding("key.choker.button", Keyboard.KEY_R, "key.acceleratormod.chokerbutton");
-    public static final KeyBinding function = new KeyBinding("key.choker.function", Keyboard.KEY_F, "key.acceleratormod.function");
-
     public static final int HELMET = 0;
     public static final ItemArmor.ArmorMaterial ACC_ARM = EnumHelper.addArmorMaterial("ACC_ARM", 100, new int[]{2, 0, 0, 0}, 0);
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        PacketHandler.init();
         choker = new AcceleratorArmor(ACC_ARM, HELMET)
                 .setMaxStackSize(1)
                 .setCreativeTab(CreativeTabs.tabCombat)
@@ -50,9 +41,10 @@ public class AcceleratorMod {
                 .setTextureName("acceleratormod:battery");
         GameRegistry.registerItem(battery, "battery");
 
+        KeyManager.init();
         MinecraftForge.EVENT_BUS.register(new ChokerFunctions());
         FMLCommonHandler.instance().bus().register(new ChokerFunctions());
-        FMLCommonHandler.instance().bus().register(this);
+        FMLCommonHandler.instance().bus().register(new KeyManager());
     }
 
     @EventHandler
@@ -65,12 +57,6 @@ public class AcceleratorMod {
         GameRegistry.addRecipe(new ItemStack(AcceleratorMod.battery, 4),
                 " A ", "ABA", " A ",
                 'A', Items.iron_ingot, 'B', Items.redstone);
-    }
-
-    @SubscribeEvent
-    public void inputKey(InputEvent.KeyInputEvent event) {
-        if (ClientProxy.chokerButton.isPressed())
-            PacketHandler.INSTANCE.sendToServer(new MessageKeyPressed(114514));
     }
 }
 

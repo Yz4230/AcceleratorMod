@@ -3,33 +3,30 @@ package yz.acceleratormod;
 import cpw.mods.fml.common.eventhandler.EventPriority;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.InputEvent;
-import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.monster.EntitySkeleton;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityThrowable;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.ChunkPosition;
-import net.minecraft.world.World;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.world.ExplosionEvent;
+import yz.acceleratormod.keymgr.KeyManager;
 
 import java.util.Iterator;
-import java.util.List;
 
 public class ChokerFunctions {
     public static boolean activated = false;
 
     @SubscribeEvent
     public void inputKey(InputEvent.KeyInputEvent event) {
-        if (AcceleratorMod.chokerButton.isPressed() && isWearingChoker()) {
+        if (KeyManager.chokerButton.isPressed() && isWearingChoker()) {
             activated = !activated;
             Minecraft.getMinecraft().thePlayer.sendChatMessage("Choker was " + (activated ? "Enabled" : "Disabled"));
         }
-        if (AcceleratorMod.function.isPressed()) {
+        if (KeyManager.function.isPressed()) {
 
         }
     }

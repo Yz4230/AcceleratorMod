@@ -1,4 +1,4 @@
-package yz.acceleratormod;
+package yz.acceleratormod.keymgr;
 
 import cpw.mods.fml.common.network.simpleimpl.IMessage;
 import io.netty.buffer.ByteBuf;
