@@ -6,6 +6,10 @@ import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import cpw.mods.fml.common.gameevent.InputEvent;
+import cpw.mods.fml.common.network.NetworkRegistry;
+import cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import net.minecraft.client.settings.KeyBinding;
@@ -32,6 +36,7 @@ public class AcceleratorMod {
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
+        PacketHandler.init();
         choker = new AcceleratorArmor(ACC_ARM, HELMET)
                 .setMaxStackSize(1)
                 .setCreativeTab(CreativeTabs.tabCombat)
@@ -47,6 +52,7 @@ public class AcceleratorMod {
 
         MinecraftForge.EVENT_BUS.register(new ChokerFunctions());
         FMLCommonHandler.instance().bus().register(new ChokerFunctions());
+        FMLCommonHandler.instance().bus().register(this);
     }
 
     @EventHandler
@@ -59,6 +65,12 @@ public class AcceleratorMod {
         GameRegistry.addRecipe(new ItemStack(AcceleratorMod.battery, 4),
                 " A ", "ABA", " A ",
                 'A', Items.iron_ingot, 'B', Items.redstone);
+    }
+
+    @SubscribeEvent
+    public void inputKey(InputEvent.KeyInputEvent event) {
+        if (ClientProxy.chokerButton.isPressed())
+            PacketHandler.INSTANCE.sendToServer(new MessageKeyPressed(114514));
     }
 }
 

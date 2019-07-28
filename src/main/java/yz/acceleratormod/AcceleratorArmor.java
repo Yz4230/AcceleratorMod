@@ -34,10 +34,4 @@ public class AcceleratorArmor extends ItemArmor {
     public double getDurabilityForDisplay(ItemStack stack) {
         return (double)battery_remain / (double)battery_capacity;
     }
-
-    @Override
-    public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) {
-        if (world.isRemote)
-            Debugtool.Log(String.valueOf(world.getLoadedEntityList().size()));
-    }
 }
