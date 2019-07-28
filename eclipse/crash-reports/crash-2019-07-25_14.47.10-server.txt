@@ -1,0 +1,139 @@
+---- Minecraft Crash Report ----
+// I bet Cylons wouldn't have this problem.
+
+Time: 19/07/25 14:47
+Description: Ticking entity
+
+java.lang.NullPointerException: Ticking entity
+	at yz.acceleratormod.AcceleratorMod.onLivingAttackEvent(AcceleratorMod.java:106)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler_8_AcceleratorMod_onLivingAttackEvent_LivingAttackEvent.invoke(.dynamic)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
+	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:138)
+	at net.minecraftforge.common.ForgeHooks.onLivingAttack(ForgeHooks.java:294)
+	at net.minecraft.entity.EntityLivingBase.attackEntityFrom(EntityLivingBase.java:822)
+	at net.minecraft.entity.monster.EntityMob.attackEntityFrom(EntityMob.java:84)
+	at net.minecraft.entity.monster.EntityZombie.attackEntityFrom(EntityZombie.java:251)
+	at yz.acceleratormod.AcceleratorMod.onLivingAttackEvent(AcceleratorMod.java:106)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler_8_AcceleratorMod_onLivingAttackEvent_LivingAttackEvent.invoke(.dynamic)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
+	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:138)
+	at net.minecraftforge.common.ForgeHooks.onLivingAttack(ForgeHooks.java:294)
+	at net.minecraft.entity.player.EntityPlayer.attackEntityFrom(EntityPlayer.java:1105)
+	at net.minecraft.entity.player.EntityPlayerMP.attackEntityFrom(EntityPlayerMP.java:532)
+	at net.minecraft.entity.monster.EntityMob.attackEntityAsMob(EntityMob.java:140)
+	at net.minecraft.entity.monster.EntityZombie.attackEntityAsMob(EntityZombie.java:340)
+	at net.minecraft.entity.ai.EntityAIAttackOnCollide.updateTask(EntityAIAttackOnCollide.java:167)
+	at net.minecraft.entity.ai.EntityAITasks.onUpdateTasks(EntityAITasks.java:125)
+	at net.minecraft.entity.EntityLiving.updateAITasks(EntityLiving.java:613)
+	at net.minecraft.entity.EntityLivingBase.onLivingUpdate(EntityLivingBase.java:1983)
+	at net.minecraft.entity.EntityLiving.onLivingUpdate(EntityLiving.java:431)
+	at net.minecraft.entity.monster.EntityMob.onLivingUpdate(EntityMob.java:39)
+	at net.minecraft.entity.monster.EntityZombie.onLivingUpdate(EntityZombie.java:243)
+	at net.minecraft.entity.EntityLivingBase.onUpdate(EntityLivingBase.java:1816)
+	at net.minecraft.entity.EntityLiving.onUpdate(EntityLiving.java:250)
+	at net.minecraft.entity.monster.EntityMob.onUpdate(EntityMob.java:47)
+	at net.minecraft.entity.monster.EntityZombie.onUpdate(EntityZombie.java:335)
+	at net.minecraft.world.World.updateEntityWithOptionalForce(World.java:2298)
+	at net.minecraft.world.WorldServer.updateEntityWithOptionalForce(WorldServer.java:684)
+	at net.minecraft.world.World.updateEntity(World.java:2258)
+	at net.minecraft.world.World.updateEntities(World.java:2108)
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:515)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:703)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:614)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:485)
+	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:752)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at yz.acceleratormod.AcceleratorMod.onLivingAttackEvent(AcceleratorMod.java:106)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler_8_AcceleratorMod_onLivingAttackEvent_LivingAttackEvent.invoke(.dynamic)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
+	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:138)
+	at net.minecraftforge.common.ForgeHooks.onLivingAttack(ForgeHooks.java:294)
+	at net.minecraft.entity.EntityLivingBase.attackEntityFrom(EntityLivingBase.java:822)
+	at net.minecraft.entity.monster.EntityMob.attackEntityFrom(EntityMob.java:84)
+	at net.minecraft.entity.monster.EntityZombie.attackEntityFrom(EntityZombie.java:251)
+	at yz.acceleratormod.AcceleratorMod.onLivingAttackEvent(AcceleratorMod.java:106)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler_8_AcceleratorMod_onLivingAttackEvent_LivingAttackEvent.invoke(.dynamic)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
+	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:138)
+	at net.minecraftforge.common.ForgeHooks.onLivingAttack(ForgeHooks.java:294)
+	at net.minecraft.entity.player.EntityPlayer.attackEntityFrom(EntityPlayer.java:1105)
+	at net.minecraft.entity.player.EntityPlayerMP.attackEntityFrom(EntityPlayerMP.java:532)
+	at net.minecraft.entity.monster.EntityMob.attackEntityAsMob(EntityMob.java:140)
+	at net.minecraft.entity.monster.EntityZombie.attackEntityAsMob(EntityZombie.java:340)
+	at net.minecraft.entity.ai.EntityAIAttackOnCollide.updateTask(EntityAIAttackOnCollide.java:167)
+	at net.minecraft.entity.ai.EntityAITasks.onUpdateTasks(EntityAITasks.java:125)
+	at net.minecraft.entity.EntityLiving.updateAITasks(EntityLiving.java:613)
+	at net.minecraft.entity.EntityLivingBase.onLivingUpdate(EntityLivingBase.java:1983)
+	at net.minecraft.entity.EntityLiving.onLivingUpdate(EntityLiving.java:431)
+	at net.minecraft.entity.monster.EntityMob.onLivingUpdate(EntityMob.java:39)
+	at net.minecraft.entity.monster.EntityZombie.onLivingUpdate(EntityZombie.java:243)
+	at net.minecraft.entity.EntityLivingBase.onUpdate(EntityLivingBase.java:1816)
+	at net.minecraft.entity.EntityLiving.onUpdate(EntityLiving.java:250)
+	at net.minecraft.entity.monster.EntityMob.onUpdate(EntityMob.java:47)
+	at net.minecraft.entity.monster.EntityZombie.onUpdate(EntityZombie.java:335)
+	at net.minecraft.world.World.updateEntityWithOptionalForce(World.java:2298)
+	at net.minecraft.world.WorldServer.updateEntityWithOptionalForce(WorldServer.java:684)
+	at net.minecraft.world.World.updateEntity(World.java:2258)
+
+-- Entity being ticked --
+Details:
+	Entity Type: Zombie (net.minecraft.entity.monster.EntityZombie)
+	Entity ID: 109
+	Entity Name: ƒ]ƒ“ƒr
+	Entity's Exact location: 602.26, 4.00, -606.29
+	Entity's Block location: World: (602,4,-607), Chunk: (at 10,0,1 in 37,-38; contains blocks 592,0,-608 to 607,255,-593), Region: (1,-2; contains chunks 32,-64 to 63,-33, blocks 512,0,-1024 to 1023,255,-513)
+	Entity's Momentum: -0.09, -0.08, 0.08
+Stacktrace:
+	at net.minecraft.world.World.updateEntities(World.java:2108)
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:515)
+
+-- Affected level --
+Details:
+	Level name: dbg
+	All players: 1 total; [EntityPlayerMP['Player308'/235, l='dbg', x=602.77, y=4.00, z=-606.98]]
+	Chunk stats: ServerChunkCache: 625 Drop: 0
+	Level seed: -1227386372992804939
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (612,4,-598), Chunk: (at 4,0,10 in 38,-38; contains blocks 608,0,-608 to 623,255,-593), Region: (1,-2; contains chunks 32,-64 to 63,-33, blocks 512,0,-1024 to 1023,255,-513)
+	Level time: 838 game time, 20242 day time
+	Level dimension: 0
+	Level storage version: 0x04ABD - Anvil
+	Level weather: Rain time: 162158 (now: false), thunder time: 95879 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: true
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:703)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:614)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:485)
+	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:752)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_221, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 324111232 bytes (309 MB) / 571473920 bytes (545 MB) up to 3801088000 bytes (3625 MB)
+	JVM Flags: 0 total; 
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1448 4 mods loaded, 4 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{7.10.99.99} [Forge Mod Loader] (forgeSrc-1.7.10-10.13.4.1448-1.7.10.jar) 
+	UCHIJAAAA	Forge{10.13.4.1448} [Minecraft Forge] (forgeSrc-1.7.10-10.13.4.1448-1.7.10.jar) 
+	UCHIJAAAA	AcceleratorMod{19.07.14} [Accelerator Mod] (modid-1.0.jar) 
+	GL info: ~~ERROR~~ RuntimeException: No OpenGL context found in the current thread.
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Player Count: 1 / 8; [EntityPlayerMP['Player308'/235, l='dbg', x=602.77, y=4.00, z=-606.98]]
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'fml,forge'

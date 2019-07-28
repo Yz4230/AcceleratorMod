@@ -1,0 +1,103 @@
+---- Minecraft Crash Report ----
+// Hi. I'm Minecraft, and I'm a crashaholic.
+
+Time: 19/07/25 14:57
+Description: Ticking entity
+
+java.lang.NullPointerException: Ticking entity
+	at yz.acceleratormod.AcceleratorMod.onExplosionDetonate(AcceleratorMod.java:85)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler_8_AcceleratorMod_onExplosionDetonate_Detonate.invoke(.dynamic)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
+	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:138)
+	at net.minecraftforge.event.ForgeEventFactory.onExplosionDetonate(ForgeEventFactory.java:246)
+	at net.minecraft.world.Explosion.doExplosionA(Explosion.java:122)
+	at net.minecraft.world.WorldServer.newExplosion(WorldServer.java:973)
+	at net.minecraft.world.World.createExplosion(World.java:2655)
+	at net.minecraft.entity.monster.EntityCreeper.func_146077_cc(EntityCreeper.java:296)
+	at net.minecraft.entity.monster.EntityCreeper.onUpdate(EntityCreeper.java:170)
+	at net.minecraft.world.World.updateEntityWithOptionalForce(World.java:2298)
+	at net.minecraft.world.WorldServer.updateEntityWithOptionalForce(WorldServer.java:684)
+	at net.minecraft.world.World.updateEntity(World.java:2258)
+	at net.minecraft.world.World.updateEntities(World.java:2108)
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:515)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:703)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:614)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:485)
+	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:752)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at yz.acceleratormod.AcceleratorMod.onExplosionDetonate(AcceleratorMod.java:85)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler_8_AcceleratorMod_onExplosionDetonate_Detonate.invoke(.dynamic)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
+	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:138)
+	at net.minecraftforge.event.ForgeEventFactory.onExplosionDetonate(ForgeEventFactory.java:246)
+	at net.minecraft.world.Explosion.doExplosionA(Explosion.java:122)
+	at net.minecraft.world.WorldServer.newExplosion(WorldServer.java:973)
+	at net.minecraft.world.World.createExplosion(World.java:2655)
+	at net.minecraft.entity.monster.EntityCreeper.func_146077_cc(EntityCreeper.java:296)
+	at net.minecraft.entity.monster.EntityCreeper.onUpdate(EntityCreeper.java:170)
+	at net.minecraft.world.World.updateEntityWithOptionalForce(World.java:2298)
+	at net.minecraft.world.WorldServer.updateEntityWithOptionalForce(WorldServer.java:684)
+	at net.minecraft.world.World.updateEntity(World.java:2258)
+
+-- Entity being ticked --
+Details:
+	Entity Type: Creeper (net.minecraft.entity.monster.EntityCreeper)
+	Entity ID: 106
+	Entity Name: クリーパー
+	Entity's Exact location: 590.02, 4.00, -566.16
+	Entity's Block location: World: (590,4,-567), Chunk: (at 14,0,9 in 36,-36; contains blocks 576,0,-576 to 591,255,-561), Region: (1,-2; contains chunks 32,-64 to 63,-33, blocks 512,0,-1024 to 1023,255,-513)
+	Entity's Momentum: 0.00, -0.08, 0.00
+Stacktrace:
+	at net.minecraft.world.World.updateEntities(World.java:2108)
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:515)
+
+-- Affected level --
+Details:
+	Level name: dbg
+	All players: 1 total; [EntityPlayerMP['Player420'/223, l='dbg', x=588.35, y=4.00, z=-568.46]]
+	Chunk stats: ServerChunkCache: 721 Drop: 0
+	Level seed: -1227386372992804939
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (612,4,-598), Chunk: (at 4,0,10 in 38,-38; contains blocks 608,0,-608 to 623,255,-593), Region: (1,-2; contains chunks 32,-64 to 63,-33, blocks 512,0,-1024 to 1023,255,-513)
+	Level time: 2084 game time, 21488 day time
+	Level dimension: 0
+	Level storage version: 0x04ABD - Anvil
+	Level weather: Rain time: 160912 (now: false), thunder time: 94633 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: true
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:703)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:614)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:485)
+	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:752)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_221, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 437144968 bytes (416 MB) / 560463872 bytes (534 MB) up to 3801088000 bytes (3625 MB)
+	JVM Flags: 0 total; 
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1448 4 mods loaded, 4 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{7.10.99.99} [Forge Mod Loader] (forgeSrc-1.7.10-10.13.4.1448-1.7.10.jar) 
+	UCHIJAAAA	Forge{10.13.4.1448} [Minecraft Forge] (forgeSrc-1.7.10-10.13.4.1448-1.7.10.jar) 
+	UCHIJAAAA	AcceleratorMod{19.07.14} [Accelerator Mod] (modid-1.0.jar) 
+	GL info: ~~ERROR~~ RuntimeException: No OpenGL context found in the current thread.
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Player Count: 1 / 8; [EntityPlayerMP['Player420'/223, l='dbg', x=588.35, y=4.00, z=-568.46]]
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'fml,forge'

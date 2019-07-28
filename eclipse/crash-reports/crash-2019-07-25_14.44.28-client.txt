@@ -1,0 +1,131 @@
+---- Minecraft Crash Report ----
+// You're mean.
+
+Time: 19/07/25 14:44
+Description: Ticking entity
+
+java.lang.NullPointerException: Ticking entity
+	at yz.acceleratormod.AcceleratorMod.onLivingAttackEvent(AcceleratorMod.java:107)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler_7_AcceleratorMod_onLivingAttackEvent_LivingAttackEvent.invoke(.dynamic)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
+	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:138)
+	at net.minecraftforge.common.ForgeHooks.onLivingAttack(ForgeHooks.java:294)
+	at net.minecraft.entity.EntityLivingBase.attackEntityFrom(EntityLivingBase.java:822)
+	at net.minecraft.entity.EntityLivingBase.onEntityUpdate(EntityLivingBase.java:241)
+	at net.minecraft.entity.EntityLiving.onEntityUpdate(EntityLiving.java:192)
+	at net.minecraft.entity.Entity.onUpdate(Entity.java:386)
+	at net.minecraft.entity.EntityLivingBase.onUpdate(EntityLivingBase.java:1766)
+	at net.minecraft.entity.EntityLiving.onUpdate(EntityLiving.java:250)
+	at net.minecraft.entity.monster.EntitySlime.onUpdate(EntitySlime.java:113)
+	at net.minecraft.world.World.updateEntityWithOptionalForce(World.java:2298)
+	at net.minecraft.world.World.updateEntity(World.java:2258)
+	at net.minecraft.world.World.updateEntities(World.java:2108)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:2097)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1039)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:962)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at yz.acceleratormod.AcceleratorMod.onLivingAttackEvent(AcceleratorMod.java:107)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler_7_AcceleratorMod_onLivingAttackEvent_LivingAttackEvent.invoke(.dynamic)
+	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
+	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:138)
+	at net.minecraftforge.common.ForgeHooks.onLivingAttack(ForgeHooks.java:294)
+	at net.minecraft.entity.EntityLivingBase.attackEntityFrom(EntityLivingBase.java:822)
+	at net.minecraft.entity.EntityLivingBase.onEntityUpdate(EntityLivingBase.java:241)
+	at net.minecraft.entity.EntityLiving.onEntityUpdate(EntityLiving.java:192)
+	at net.minecraft.entity.Entity.onUpdate(Entity.java:386)
+	at net.minecraft.entity.EntityLivingBase.onUpdate(EntityLivingBase.java:1766)
+	at net.minecraft.entity.EntityLiving.onUpdate(EntityLiving.java:250)
+	at net.minecraft.entity.monster.EntitySlime.onUpdate(EntitySlime.java:113)
+	at net.minecraft.world.World.updateEntityWithOptionalForce(World.java:2298)
+	at net.minecraft.world.World.updateEntity(World.java:2258)
+
+-- Entity being ticked --
+Details:
+	Entity Type: Slime (net.minecraft.entity.monster.EntitySlime)
+	Entity ID: 206
+	Entity Name: スライム
+	Entity's Exact location: 478.38, 1.00, 788.69
+	Entity's Block location: World: (478,1,788), Chunk: (at 14,0,4 in 29,49; contains blocks 464,0,784 to 479,255,799), Region: (0,1; contains chunks 0,32 to 31,63, blocks 0,0,512 to 511,255,1023)
+	Entity's Momentum: 0.00, -0.08, 0.00
+Stacktrace:
+	at net.minecraft.world.World.updateEntities(World.java:2108)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['Player615'/368, l='MpServer', x=502.33, y=5.62, z=793.05]]
+	Chunk stats: MultiplayerChunkCache: 30, 30
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (481,4,782), Chunk: (at 1,0,14 in 30,48; contains blocks 480,0,768 to 495,255,783), Region: (0,1; contains chunks 0,32 to 31,63, blocks 0,0,512 to 511,255,1023)
+	Level time: 82718 game time, 32399 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 75 total; [EntitySlime['スライム'/263, l='MpServer', x=535.91, y=4.00, z=753.34], EntitySlime['スライム'/264, l='MpServer', x=539.38, y=4.00, z=758.13], EntitySlime['スライム'/265, l='MpServer', x=529.78, y=4.00, z=778.78], EntitySlime['スライム'/266, l='MpServer', x=529.78, y=4.00, z=775.69], EntitySlime['スライム'/267, l='MpServer', x=539.88, y=4.00, z=779.31], EntitySlime['スライム'/268, l='MpServer', x=540.00, y=4.00, z=770.66], EntityItem['item.item.wheat'/269, l='MpServer', x=535.94, y=4.13, z=797.75], EntityItem['item.item.seeds'/270, l='MpServer', x=537.41, y=5.13, z=799.22], EntityItem['item.item.potato'/271, l='MpServer', x=534.91, y=4.13, z=797.28], EntityItem['item.item.seeds'/272, l='MpServer', x=537.38, y=5.13, z=788.94], EntityItem['item.item.potato'/273, l='MpServer', x=536.16, y=5.13, z=792.22], EntityItem['item.item.potato'/274, l='MpServer', x=537.56, y=5.13, z=795.47], EntityItem['item.item.wheat'/275, l='MpServer', x=536.22, y=5.13, z=798.06], EntityItem['item.item.potato'/276, l='MpServer', x=532.75, y=5.13, z=796.47], EntityItem['item.item.potato'/277, l='MpServer', x=533.06, y=4.13, z=797.66], EntityItem['item.item.potato'/278, l='MpServer', x=533.63, y=4.13, z=791.44], EntityItem['item.item.potato'/279, l='MpServer', x=536.47, y=5.13, z=795.69], EntityItem['item.item.potato'/280, l='MpServer', x=532.38, y=5.13, z=793.31], EntitySlime['スライム'/281, l='MpServer', x=528.78, y=4.00, z=784.97], EntitySlime['スライム'/282, l='MpServer', x=543.72, y=4.92, z=797.99], EntityItem['item.item.seeds'/283, l='MpServer', x=536.22, y=5.13, z=800.16], EntityItem['item.item.potato'/284, l='MpServer', x=537.03, y=5.13, z=811.28], EntityItem['item.item.potato'/285, l='MpServer', x=536.91, y=5.13, z=813.22], EntityItem['item.item.seeds'/286, l='MpServer', x=532.69, y=5.13, z=800.53], EntityItem['item.item.wheat'/287, l='MpServer', x=543.19, y=5.13, z=804.00], EntityItem['item.item.seeds'/288, l='MpServer', x=543.28, y=5.13, z=802.97], EntityItem['item.item.wheat'/289, l='MpServer', x=543.38, y=5.13, z=805.19], EntityItem['item.item.seeds'/290, l='MpServer', x=542.63, y=5.13, z=806.41], EntityItem['item.item.seeds'/295, l='MpServer', x=555.19, y=5.13, z=767.97], EntityItem['item.item.carrots'/296, l='MpServer', x=553.72, y=5.13, z=767.34], EntityItem['item.item.carrots'/297, l='MpServer', x=552.75, y=5.13, z=766.78], EntityVillager['村人'/299, l='MpServer', x=559.09, y=5.00, z=783.97], EntityItem['item.item.wheat'/300, l='MpServer', x=555.88, y=5.13, z=770.63], EntityItem['item.item.seeds'/301, l='MpServer', x=556.47, y=5.13, z=768.50], EntityItem['item.item.seeds'/302, l='MpServer', x=554.22, y=5.13, z=770.44], EntityItem['item.item.wheat'/303, l='MpServer', x=555.78, y=5.13, z=768.78], EntityItem['item.item.carrots'/304, l='MpServer', x=553.28, y=5.13, z=768.81], EntityVillager['村人'/305, l='MpServer', x=559.97, y=5.00, z=783.06], EntitySlime['スライム'/306, l='MpServer', x=554.78, y=6.16, z=789.84], EntityVillager['村人'/307, l='MpServer', x=557.06, y=5.00, z=786.50], EntitySlime['スライム'/308, l='MpServer', x=546.66, y=5.00, z=798.59], EntityItem['item.item.potato'/309, l='MpServer', x=547.69, y=5.13, z=805.84], EntityItem['item.item.potato'/310, l='MpServer', x=546.13, y=5.13, z=806.31], EntityItem['item.item.seeds'/311, l='MpServer', x=545.63, y=4.13, z=805.84], EntityItem['item.item.carrots'/312, l='MpServer', x=549.81, y=5.13, z=802.44], EntityItem['item.item.wheat'/313, l='MpServer', x=554.16, y=5.13, z=800.81], EntityItem['item.item.potato'/314, l='MpServer', x=546.19, y=5.13, z=800.41], EntitySlime['スライム'/315, l='MpServer', x=546.75, y=4.00, z=826.50], EntityCow['ウシ'/197, l='MpServer', x=472.88, y=4.00, z=763.28], EntityCow['ウシ'/198, l='MpServer', x=472.22, y=4.00, z=768.38], EntitySlime['スライム'/199, l='MpServer', x=478.38, y=1.00, z=783.13], EntityItem['item.item.slimeball'/200, l='MpServer', x=464.25, y=1.13, z=782.38], EntitySlime['スライム'/201, l='MpServer', x=472.50, y=1.41, z=779.38], EntitySlime['スライム'/202, l='MpServer', x=473.25, y=4.00, z=772.22], EntitySlime['スライム'/203, l='MpServer', x=477.44, y=4.00, z=770.88], EntityItem['item.item.slimeball'/204, l='MpServer', x=475.09, y=1.13, z=785.09], EntityItem['item.item.slimeball'/205, l='MpServer', x=471.16, y=1.13, z=790.03], EntitySlime['スライム'/206, l='MpServer', x=478.38, y=1.00, z=788.69], EntitySlime['スライム'/207, l='MpServer', x=478.25, y=4.00, z=828.28], EntitySlime['スライム'/229, l='MpServer', x=484.85, y=4.00, z=790.53], EntitySlime['スライム'/230, l='MpServer', x=492.31, y=4.00, z=810.13], EntityChicken['ニワトリ'/231, l='MpServer', x=483.22, y=4.00, z=823.81], EntitySlime['スライム'/238, l='MpServer', x=509.50, y=4.00, z=760.28], EntityItem['item.item.beefRaw'/239, l='MpServer', x=505.06, y=4.13, z=795.59], EntityChicken['ニワトリ'/240, l='MpServer', x=497.66, y=4.00, z=821.56], EntityClientPlayerMP['Player615'/368, l='MpServer', x=502.33, y=5.62, z=793.05], EntitySlime['スライム'/243, l='MpServer', x=514.91, y=4.75, z=754.69], EntitySlime['スライム'/244, l='MpServer', x=525.91, y=5.00, z=758.44], EntityItem['item.item.slimeball'/245, l='MpServer', x=527.88, y=4.13, z=772.72], EntityItem['item.item.wheat'/246, l='MpServer', x=524.06, y=5.13, z=779.06], EntityItem['item.item.seeds'/247, l='MpServer', x=524.75, y=5.13, z=779.91], EntityItem['item.item.seeds'/248, l='MpServer', x=520.06, y=5.13, z=779.09], EntityItem['item.item.carrots'/249, l='MpServer', x=523.00, y=5.13, z=781.59], EntityItem['item.item.carrots'/250, l='MpServer', x=526.31, y=5.13, z=782.91], EntitySlime['スライム'/251, l='MpServer', x=524.60, y=4.02, z=808.56]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:415)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2566)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:984)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_221, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 324071728 bytes (309 MB) / 555220992 bytes (529 MB) up to 3801088000 bytes (3625 MB)
+	JVM Flags: 0 total; 
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1448 4 mods loaded, 4 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{7.10.99.99} [Forge Mod Loader] (forgeSrc-1.7.10-10.13.4.1448-1.7.10.jar) 
+	UCHIJAAAA	Forge{10.13.4.1448} [Minecraft Forge] (forgeSrc-1.7.10-10.13.4.1448-1.7.10.jar) 
+	UCHIJAAAA	AcceleratorMod{19.07.14} [Accelerator Mod] (modid-1.0.jar) 
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.6.0 NVIDIA 430.86' Renderer: 'GeForce GTX 1080/PCIe/SSE2'
+	Launched Version: 1.7.10
+	LWJGL: 2.9.1
+	OpenGL: GeForce GTX 1080/PCIe/SSE2 GL version 4.6.0 NVIDIA 430.86, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Anisotropic filtering is supported and maximum anisotropy is 16.
+Shaders are available because OpenGL 2.1 is supported.
+
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: 日本語 (日本)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Anisotropic Filtering: Off (1)
