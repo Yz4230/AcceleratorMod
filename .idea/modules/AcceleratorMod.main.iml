@@ -3,6 +3,20 @@
   <component name="FacetManager">
     <facet type="minecraft" name="Minecraft">
       <configuration>
+        <userChosenTypes>
+          <map>
+            <entry key="PAPER" value="false" />
+            <entry key="SPIGOT" value="false" />
+            <entry key="BUKKIT" value="false" />
+            <entry key="FORGE" value="true" />
+            <entry key="SPONGE" value="false" />
+            <entry key="WATERFALL" value="false" />
+            <entry key="BUNGEECORD" value="false" />
+            <entry key="LITELOADER" value="false" />
+            <entry key="MIXIN" value="false" />
+            <entry key="MCP" value="true" />
+          </map>
+        </userChosenTypes>
         <autoDetectTypes>
           <platformType>MCP</platformType>
         </autoDetectTypes>

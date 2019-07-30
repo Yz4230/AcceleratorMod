@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eeab22d0-007c-4c1b-bd41-7af973a77684" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/keymgr/KeyManager.java" afterDir="false" />
+    <list default="true" id="eeab22d0-007c-4c1b-bd41-7af973a77684" name="Default Changelist" comment="Sync Client and Server's Key State">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/acceleratormod/textures/armor/accelerator_armor_on.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/acceleratormod/textures/items/choker_on.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.2.1/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.2.1/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.2.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.2.1/fileHashes/fileHashes.lock" afterDir="false" />
@@ -11,7 +12,11 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.2.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.2.1/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.2.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.2.1/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/AcceleratorMod.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/AcceleratorMod.main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eclipse/config/splash.properties" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/config/splash.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eclipse/logs/fml-client-1.log" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/logs/fml-client-1.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eclipse/logs/fml-client-2.log" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/logs/fml-client-2.log" afterDir="false" />
@@ -24,37 +29,15 @@
       <change beforePath="$PROJECT_DIR$/eclipse/saves/New World/DIM1/data/villages.dat" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/saves/New World/DIM1/data/villages.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eclipse/saves/New World/data/villages.dat" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/saves/New World/data/villages.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eclipse/saves/New World/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/saves/New World/level.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eclipse/saves/New World/level.dat_mcr" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/saves/New World/level.dat_mcr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eclipse/saves/New World/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/saves/New World/level.dat_old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/1b411c64-a8c2-3ec5-98f5-0b867e192819.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/2e2bad62-fd9f-3bb5-a89e-b314a4f30e73.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/4e1f5e28-f05f-3acf-ac65-db01d9d51f95.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/777409db-46bf-31bf-844f-6d600c083d6c.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eclipse/saves/New World/playerdata/def15adf-07af-3672-a35b-fe69f139863f.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eclipse/saves/New World/region/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/saves/New World/region/r.-1.0.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eclipse/saves/New World/region/r.-1.1.mca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eclipse/saves/New World/region/r.-1.2.mca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eclipse/saves/New World/region/r.-1.3.mca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eclipse/saves/New World/region/r.-2.1.mca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eclipse/saves/New World/region/r.-2.2.mca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eclipse/saves/New World/region/r.-2.3.mca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eclipse/saves/New World/region/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/saves/New World/region/r.0.0.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eclipse/saves/New World/region/r.0.1.mca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eclipse/saves/New World/region/r.0.2.mca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eclipse/saves/New World/region/r.0.3.mca" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/eclipse/saves/New World/session.lock" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/saves/New World/session.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/1b411c64-a8c2-3ec5-98f5-0b867e192819.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/2e2bad62-fd9f-3bb5-a89e-b314a4f30e73.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/4e1f5e28-f05f-3acf-ac65-db01d9d51f95.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/777409db-46bf-31bf-844f-6d600c083d6c.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eclipse/saves/New World/stats/def15adf-07af-3672-a35b-fe69f139863f.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/eclipse/usernamecache.json" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/usernamecache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/AcceleratorArmor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/AcceleratorArmor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/AcceleratorMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/AcceleratorMod.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/ChokerFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/ChokerFunctions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/ClientProxy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/MessageKeyPressed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/keymgr/MessageKeyPressed.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/MessageKeyPressedHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/keymgr/MessageKeyPressedHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/PacketHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/keymgr/PacketHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/keymgr/KeyManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/keymgr/KeyManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/acceleratormod/lang/en_US.lang" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/acceleratormod/lang/en_US.lang" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/acceleratormod/lang/ja_JP.lang" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/acceleratormod/lang/ja_JP.lang" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,6 +77,30 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="AcceleratorMod" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="AcceleratorMod" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="documentation" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="AcceleratorMod" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="forgegradle" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="AcceleratorMod" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="AcceleratorMod" type="f1a62948:ProjectNode" />
                 <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
               </path>
             </expand>
@@ -120,23 +127,23 @@
   <component name="PropertiesComponent">
     <property name="OverrideImplement.combined" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/build.gradle" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="yz.acceleratormod" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\modding\AcceleratorMod\eclipse\mods" />
       <recent name="D:\modding\AcceleratorMod\src\main\resources\assets\acceleratormod\textures\armor" />
+      <recent name="D:\modding\AcceleratorMod\src\main\resources\assets\acceleratormod\textures\items" />
+      <recent name="D:\modding\AcceleratorMod\eclipse\mods" />
       <recent name="D:\modding\AcceleratorMod\src\main\resources\assets\acceleratormod\textures" />
       <recent name="D:\modding\AcceleratorMod\src\main\resources\assets\acceleratormod\textures\armor\accelerator_armor" />
-      <recent name="D:\modding\AcceleratorMod\src\main\resources\assets\acceleratormod\textures\items" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -195,8 +202,18 @@
       <option name="project" value="LOCAL" />
       <updated>1564319389216</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Sync Client and Server's Key State">
+      <created>1564321892725</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1564321892725</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.cfg" />
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
@@ -213,7 +230,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -222,7 +241,8 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="Add PacketHandler" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add PacketHandler" />
+    <MESSAGE value="Sync Client and Server's Key State" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sync Client and Server's Key State" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

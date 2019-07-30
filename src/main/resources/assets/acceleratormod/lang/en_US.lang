@@ -1,2 +1,5 @@
 item.choker.name=Choker
 item.battery.name=Battery
+key.acceleratormod=Accelerator Mod
+key.choker.button=Activate Choker
+key.choker.function=Use Function

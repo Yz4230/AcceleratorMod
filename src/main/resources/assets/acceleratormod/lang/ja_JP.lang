@@ -1,2 +1,5 @@
 item.choker.name=チョーカー
 item.battery.name=バッテリー
+key.acceleratormod=Accelerator Mod
+key.choker.button=チョーカーの電源を入れる
+key.choker.function=機能を使う

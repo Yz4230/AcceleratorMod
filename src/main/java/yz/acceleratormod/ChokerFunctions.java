@@ -4,30 +4,39 @@ import cpw.mods.fml.common.eventhandler.EventPriority;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.InputEvent;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.entity.EntityClientPlayerMP;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityList;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.monster.EntitySlime;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.projectile.EntityThrowable;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemArmor;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.ChunkPosition;
+import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.world.ExplosionEvent;
 import yz.acceleratormod.keymgr.KeyManager;
 
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 public class ChokerFunctions {
     public static boolean activated = false;
+    public static List<String> entityList = new ArrayList<String>();
+    public static List<Entity> entityToReflecting = new ArrayList<Entity>();
+    public static String[] defalutEntityToReflect =
+            {"Arrow", "Egg", "Snowball", "FireBall", "SmallFireBall", "Potion", "WitherSkull", "FallingBlock"};
 
     @SubscribeEvent
     public void inputKey(InputEvent.KeyInputEvent event) {
         if (KeyManager.chokerButton.isPressed() && isWearingChoker()) {
             activated = !activated;
-            Minecraft.getMinecraft().thePlayer.sendChatMessage("Choker was " + (activated ? "Enabled" : "Disabled"));
-        }
-        if (KeyManager.function.isPressed()) {
-
+            EntityClientPlayerMP entityPlayer = Minecraft.getMinecraft().thePlayer;
+            entityPlayer.sendChatMessage("Choker was " + (activated ? "Enabled" : "Disabled"));
         }
     }
 
@@ -72,12 +81,7 @@ public class ChokerFunctions {
         Entity giveEntity = event.source.getEntity();
         if (isActivated()) {
             if (recieveEntity instanceof EntityPlayer) {
-                if (giveEntity instanceof EntityThrowable) {
-                    EntityThrowable e = ((EntityThrowable) giveEntity);
-                    e.setVelocity(-e.motionX, -e.motionY, -e.motionZ);
-                    Debugtool.Log(String.valueOf(giveEntity.hashCode()));
-                    event.setCanceled(true);
-                } else if (giveEntity instanceof EntityLivingBase) {
+                if (giveEntity instanceof EntityLivingBase) {
                     giveEntity.attackEntityFrom(DamageSource.generic, event.ammount * 2);
                     ((EntityLivingBase) giveEntity).knockBack(null, 0, 2000, 2000);
                     event.setCanceled(true);
@@ -86,17 +90,52 @@ public class ChokerFunctions {
         }
     }
 
+    @SubscribeEvent
+    public void onEntityJoinWorld(EntityJoinWorldEvent event) {
+        if (!event.world.isRemote && event.entity instanceof EntitySlime)
+            event.setCanceled(true);
+        for (String s : entityList)
+            if (s.equals(EntityList.getEntityString(event.entity))) {
+                entityToReflecting.add(event.entity);
+                break;
+            }
+    }
+
+    public static void customTick() {
+        List<Entity> refList = new ArrayList<>();
+        entityToReflecting.removeIf(e -> e.isDead);
+        for (Entity entity : entityToReflecting) {
+            if (entity.getDistanceToEntity(Minecraft.getMinecraft().thePlayer) < 1)
+                refList.add(entity);
+        }
+        if (KeyManager.function.getIsKeyPressed()) {
+            KeyManager.function.isPressed();
+            entityToReflecting.removeAll(refList);
+            for (Entity entity : refList) {
+                entity.motionX = -entity.motionX;
+                entity.motionY = -entity.motionY;
+                entity.motionZ = -entity.motionZ;
+            }
+        }
+    }
+
     public boolean isActivated() {
         EntityPlayer entityPlayer = Minecraft.getMinecraft().thePlayer;
         if (entityPlayer.getCurrentArmor(3) == null || !activated)
             return false;
-        return entityPlayer.getCurrentArmor(3).getItem() instanceof AcceleratorArmor;
+        ItemArmor itemArmor = (ItemArmor)getPlayerHeadArmor();
+        return itemArmor instanceof AcceleratorArmor && ((AcceleratorArmor)itemArmor).battery_remain != 0;
     }
 
     public boolean isWearingChoker() {
         EntityPlayer entityPlayer = Minecraft.getMinecraft().thePlayer;
         if (entityPlayer.getCurrentArmor(3) == null)
             return false;
-        return entityPlayer.getCurrentArmor(3).getItem() instanceof AcceleratorArmor;
+        return getPlayerHeadArmor() instanceof AcceleratorArmor;
+    }
+
+    private Item getPlayerHeadArmor() {
+        EntityPlayer entityPlayer = Minecraft.getMinecraft().thePlayer;
+        return entityPlayer.getCurrentArmor(3).getItem();
     }
 }
