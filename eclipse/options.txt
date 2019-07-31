@@ -17,7 +17,7 @@ ao:2
 clouds:true
 resourcePacks:[]
 lastServer:
-lang:en_US
+lang:ja_JP
 chatVisibility:0
 chatColors:true
 chatLinks:true
@@ -91,7 +91,7 @@ key_key.choker.function:56
 soundCategory_master:1.0
 soundCategory_music:0.0
 soundCategory_record:1.0
-soundCategory_weather:0.0
+soundCategory_weather:1.0
 soundCategory_block:1.0
 soundCategory_hostile:1.0
 soundCategory_neutral:1.0

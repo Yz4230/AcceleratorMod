@@ -1,0 +1,23 @@
+{
+  "power_btn": {
+    "category": "master",
+    "sounds": [{
+      "name": "acceleratormod:power_btn",
+      "stream": false
+      }]
+  },
+  "reflection": {
+    "category": "master",
+    "sounds": [{
+      "name": "acceleratormod:reflection",
+      "stream": false
+    }]
+  },
+  "strong_punch": {
+    "category": "master",
+    "sounds": [{
+      "name": "acceleratormod:strong_punch",
+      "stream": false
+    }]
+  }
+}

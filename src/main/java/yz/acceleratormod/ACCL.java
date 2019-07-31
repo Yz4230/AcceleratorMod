@@ -16,7 +16,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.util.EnumHelper;
-import yz.acceleratormod.armor.AcceleratorArmor;
+import yz.acceleratormod.armor.ACCLArmor;
 import yz.acceleratormod.keymgr.KeyManager;
 import yz.acceleratormod.keymgr.PacketHandler;
 
@@ -24,7 +24,7 @@ import java.util.Arrays;
 
 @Mod(modid = ACCL.MOD_ID, name = ACCL.MOD_NAME, version = ACCL.MOD_VERSION)
 public class ACCL {
-    public static final String MOD_ID = "AcceleratorMod";
+    public static final String MOD_ID = "acceleratormod";
     public static final String MOD_NAME = "Accelerator Mod";
     public static final String MOD_VERSION = "19.07.14";
 
@@ -38,7 +38,7 @@ public class ACCL {
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        choker = new AcceleratorArmor(CHOKER, HELMET)
+        choker = new ACCLArmor(CHOKER, HELMET)
                 .setMaxStackSize(1)
                 .setCreativeTab(CreativeTabs.tabCombat)
                 .setUnlocalizedName("choker");
@@ -54,16 +54,16 @@ public class ACCL {
         try {
             cfg.load();
             String[] entityIdRaw = cfg.getStringList("entity_IDs", "Choker Settings",
-                    ChokerFunctions.defalutEntityToReflect, "Entity IDs to reflect");
-            ChokerFunctions.entityList.addAll(Arrays.asList(ChokerFunctions.defalutEntityToReflect));
-            ChokerFunctions.entityList.addAll(Arrays.asList(entityIdRaw));
+                    ChokerFunction.defalutEntityToReflect, "Entity IDs to reflect");
+            ChokerFunction.entityList.addAll(Arrays.asList(ChokerFunction.defalutEntityToReflect));
+            ChokerFunction.entityList.addAll(Arrays.asList(entityIdRaw));
         } finally {
             cfg.save();
         }
 
-        PacketHandler.init(0);
-        MinecraftForge.EVENT_BUS.register(new ChokerFunctions());
-        FMLCommonHandler.instance().bus().register(new ChokerFunctions());
+        PacketHandler.init();
+        MinecraftForge.EVENT_BUS.register(new ChokerFunction());
+        FMLCommonHandler.instance().bus().register(new ChokerFunction());
         FMLCommonHandler.instance().bus().register(new TickHandler());
     }
 

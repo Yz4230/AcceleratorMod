@@ -1,24 +1,89 @@
-[00:10:12] [main/INFO]: Setting user: Player897
-[00:10:13] [Client thread/INFO]: LWJGL Version: 2.9.1
-[00:10:16] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Accelerator Mod
-[00:10:17] [Sound Library Loader/INFO]: Sound engine started
-[00:10:17] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[00:10:17] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[00:10:17] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Accelerator Mod
-[00:10:17] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[00:10:17] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[00:10:18] [Sound Library Loader/INFO]: Sound engine started
-[00:10:19] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[00:10:19] [Server thread/INFO]: Generating keypair
-[00:10:20] [Server thread/INFO]: Preparing start region for level 0
-[00:10:20] [Server thread/INFO]: Changing view distance to 12, from 10
-[00:10:20] [Server thread/INFO]: Player897[local:E:b1d15db0] logged in with entity id 140 at (572.0427500722585, 4.0, -1203.4261455949893)
-[00:10:20] [Server thread/INFO]: Player897 joined the game
-[00:10:21] [Server thread/INFO]: Saving and pausing game...
-[00:10:21] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[00:10:21] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[00:10:21] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[00:10:26] [Server thread/INFO]: Saving and pausing game...
-[00:10:26] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[00:10:26] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[00:10:26] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[01:56:01] [main/INFO]: Setting user: Player366
+[01:56:02] [Client thread/INFO]: LWJGL Version: 2.9.1
+[01:56:05] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Accelerator Mod
+[01:56:06] [Sound Library Loader/INFO]: Sound engine started
+[01:56:06] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[01:56:06] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[01:56:06] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Accelerator Mod
+[01:56:07] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[01:56:07] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[01:56:07] [Sound Library Loader/INFO]: Sound engine started
+[01:56:09] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[01:56:09] [Server thread/INFO]: Generating keypair
+[01:56:09] [Server thread/INFO]: Preparing start region for level 0
+[01:56:10] [Server thread/INFO]: Changing view distance to 12, from 10
+[01:56:10] [Server thread/INFO]: Player366[local:E:5e91321c] logged in with entity id 261 at (-752.1589876806369, 4.0, -235.0727171358717)
+[01:56:10] [Server thread/INFO]: Player366 がゲームに参加しました
+[01:57:02] [Server thread/INFO]: Saving and pausing game...
+[01:57:02] [Server thread/INFO]: Saving chunks for level '新規ワールド'/Overworld
+[01:57:02] [Server thread/INFO]: Saving chunks for level '新規ワールド'/Nether
+[01:57:02] [Server thread/INFO]: Saving chunks for level '新規ワールド'/The End
+[01:58:51] [Server thread/INFO]: Player366 は [所持品の確認] の実績を取得した
+[01:58:51] [Client thread/INFO]: [CHAT] Player366 は [所持品の確認] の実績を取得した
+[01:58:52] [Client thread/INFO]: [CHAT] The choker was disabled.
+[01:58:57] [Client thread/INFO]: [CHAT] The choker was enabled
+[01:59:29] [Server thread/INFO]: Saving and pausing game...
+[01:59:29] [Server thread/INFO]: Saving chunks for level '新規ワールド'/Overworld
+[01:59:29] [Server thread/INFO]: Saving chunks for level '新規ワールド'/Nether
+[01:59:29] [Server thread/INFO]: Saving chunks for level '新規ワールド'/The End
+[02:01:59] [Server thread/INFO]: [Player366: 現在時刻を0に設定]
+[02:01:59] [Client thread/INFO]: [CHAT] 現在時刻を0に設定
+[02:02:12] [Server thread/INFO]: [Player366: 現在時刻を13000に設定]
+[02:02:12] [Client thread/INFO]: [CHAT] 現在時刻を13000に設定
+[02:02:29] [Server thread/INFO]: Saving and pausing game...
+[02:02:29] [Server thread/INFO]: Saving chunks for level '新規ワールド'/Overworld
+[02:02:29] [Server thread/INFO]: Saving chunks for level '新規ワールド'/Nether
+[02:02:29] [Server thread/INFO]: Saving chunks for level '新規ワールド'/The End
+[02:02:30] [Server thread/INFO]: Stopping server
+[02:02:30] [Server thread/INFO]: Saving players
+[02:02:30] [Server thread/INFO]: Saving worlds
+[02:02:30] [Server thread/INFO]: Saving chunks for level '新規ワールド'/Overworld
+[02:02:30] [Server thread/INFO]: Saving chunks for level '新規ワールド'/Nether
+[02:02:30] [Server thread/INFO]: Saving chunks for level '新規ワールド'/The End
+[02:02:32] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[02:02:32] [Server thread/INFO]: Generating keypair
+[02:02:32] [Server thread/INFO]: Preparing start region for level 0
+[02:02:32] [Server thread/INFO]: Changing view distance to 12, from 10
+[02:02:32] [Server thread/INFO]: Player366[local:E:68fdaaef] logged in with entity id 769699 at (-722.5821379489093, 4.0, -241.4563565318619)
+[02:02:32] [Server thread/INFO]: Player366 がゲームに参加しました
+[02:02:33] [Server thread/INFO]: Saving and pausing game...
+[02:02:33] [Server thread/INFO]: Saving chunks for level '新規ワールド'/Overworld
+[02:02:33] [Server thread/INFO]: Saving chunks for level '新規ワールド'/Nether
+[02:02:33] [Server thread/INFO]: Saving chunks for level '新規ワールド'/The End
+[02:02:58] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Accelerator Mod
+[02:02:58] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[02:02:58] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[02:02:59] [Sound Library Loader/INFO]: Sound engine started
+[02:03:43] [Client thread/INFO]: [CHAT] The choker was enabled
+[02:06:34] [Server thread/INFO]: Saving and pausing game...
+[02:06:34] [Server thread/INFO]: Saving chunks for level '新規ワールド'/Overworld
+[02:06:34] [Server thread/INFO]: Saving chunks for level '新規ワールド'/Nether
+[02:06:34] [Server thread/INFO]: Saving chunks for level '新規ワールド'/The End
+[02:08:29] [Server thread/INFO]: Saving and pausing game...
+[02:08:29] [Server thread/INFO]: Saving chunks for level '新規ワールド'/Overworld
+[02:08:29] [Server thread/INFO]: Saving chunks for level '新規ワールド'/Nether
+[02:08:29] [Server thread/INFO]: Saving chunks for level '新規ワールド'/The End
+[02:08:51] [Server thread/INFO]: Saving and pausing game...
+[02:08:51] [Server thread/INFO]: Saving chunks for level '新規ワールド'/Overworld
+[02:08:51] [Server thread/INFO]: Saving chunks for level '新規ワールド'/Nether
+[02:08:51] [Server thread/INFO]: Saving chunks for level '新規ワールド'/The End
+[02:10:21] [Server thread/INFO]: Saving and pausing game...
+[02:10:21] [Server thread/INFO]: Saving chunks for level '新規ワールド'/Overworld
+[02:10:21] [Server thread/INFO]: Saving chunks for level '新規ワールド'/Nether
+[02:10:21] [Server thread/INFO]: Saving chunks for level '新規ワールド'/The End
+[02:11:39] [Server thread/INFO]: Saving and pausing game...
+[02:11:39] [Server thread/INFO]: Saving chunks for level '新規ワールド'/Overworld
+[02:11:39] [Server thread/INFO]: Saving chunks for level '新規ワールド'/Nether
+[02:11:39] [Server thread/INFO]: Saving chunks for level '新規ワールド'/The End
+[02:14:18] [Client thread/INFO]: [CHAT] The choker was enabled
+[02:16:44] [Server thread/INFO]: Saving and pausing game...
+[02:16:44] [Server thread/INFO]: Saving chunks for level '新規ワールド'/Overworld
+[02:16:44] [Server thread/INFO]: Saving chunks for level '新規ワールド'/Nether
+[02:16:44] [Server thread/INFO]: Saving chunks for level '新規ワールド'/The End
+[02:16:44] [Server thread/INFO]: Stopping server
+[02:16:44] [Server thread/INFO]: Saving players
+[02:16:44] [Server thread/INFO]: Saving worlds
+[02:16:44] [Server thread/INFO]: Saving chunks for level '新規ワールド'/Overworld
+[02:16:44] [Server thread/INFO]: Saving chunks for level '新規ワールド'/Nether
+[02:16:44] [Server thread/INFO]: Saving chunks for level '新規ワールド'/The End
+[02:16:45] [Client thread/INFO]: Stopping!

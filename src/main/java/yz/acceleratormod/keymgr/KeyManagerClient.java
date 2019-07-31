@@ -41,7 +41,7 @@ public class KeyManagerClient extends KeyManager {
         if (currentKeyState != this.lastKeyState) {
             this.processKeyUpdate(Minecraft.getMinecraft().thePlayer, currentKeyState);
             PacketHandler.INSTANCE.sendToServer(
-                    new MessageKeyPressed(currentKeyState, Minecraft.getMinecraft().thePlayer.getEntityId()));
+                    new KeyStateSyncer(currentKeyState, Minecraft.getMinecraft().thePlayer.getEntityId()));
             this.lastKeyState = currentKeyState;
         }
     }

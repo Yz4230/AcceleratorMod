@@ -7,8 +7,9 @@ import yz.acceleratormod.ACCL;
 
 public class PacketHandler {
     public static final SimpleNetworkWrapper INSTANCE = NetworkRegistry.INSTANCE.newSimpleChannel(ACCL.MOD_ID);
+    private static int id = 0;
 
-    public static void init(int id) {
-        INSTANCE.registerMessage(KeyInfoGetter.class, MessageKeyPressed.class, id, Side.SERVER);
+    public static void init() {
+        INSTANCE.registerMessage(KeyStateSyncer.class, KeyStateSyncer.class, id++, Side.SERVER);
     }
 }

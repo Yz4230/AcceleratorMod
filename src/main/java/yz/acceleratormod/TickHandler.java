@@ -6,7 +6,9 @@ import yz.acceleratormod.keymgr.KeyManagerClient;
 
 public class TickHandler {
     @SubscribeEvent
-    public void onClientTick(TickEvent.ClientTickEvent event) {
-        ((KeyManagerClient) ACCL.keyManager).sendKeyUpdate();
+    public void onTick(TickEvent event) {
+        if (event.side.isClient()) {
+            ((KeyManagerClient) ACCL.keyManager).sendKeyUpdate();
+        }
     }
 }
