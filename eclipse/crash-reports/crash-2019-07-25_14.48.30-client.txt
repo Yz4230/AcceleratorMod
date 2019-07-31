@@ -5,7 +5,7 @@ Time: 19/07/25 14:48
 Description: Unexpected error
 
 java.lang.NullPointerException: Unexpected error
-	at yz.acceleratormod.AcceleratorMod.onLivingAttackEvent(AcceleratorMod.java:106)
+	at yz.acceleratormod.ACCL.onLivingAttackEvent(AcceleratorMod.java:106)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler_8_AcceleratorMod_onLivingAttackEvent_LivingAttackEvent.invoke(.dynamic)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
 	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:138)
@@ -13,7 +13,7 @@ java.lang.NullPointerException: Unexpected error
 	at net.minecraft.entity.EntityLivingBase.attackEntityFrom(EntityLivingBase.java:822)
 	at net.minecraft.entity.monster.EntityMob.attackEntityFrom(EntityMob.java:84)
 	at net.minecraft.entity.monster.EntityZombie.attackEntityFrom(EntityZombie.java:251)
-	at yz.acceleratormod.AcceleratorMod.onPlayerAttackEntity(AcceleratorMod.java:93)
+	at yz.acceleratormod.ACCL.onPlayerAttackEntity(AcceleratorMod.java:93)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler_7_AcceleratorMod_onPlayerAttackEntity_AttackEntityEvent.invoke(.dynamic)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
 	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:138)
@@ -39,7 +39,7 @@ A detailed walkthrough of the error, its code path and all known details is as f
 
 -- Head --
 Stacktrace:
-	at yz.acceleratormod.AcceleratorMod.onLivingAttackEvent(AcceleratorMod.java:106)
+	at yz.acceleratormod.ACCL.onLivingAttackEvent(AcceleratorMod.java:106)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler_8_AcceleratorMod_onLivingAttackEvent_LivingAttackEvent.invoke(.dynamic)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
 	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:138)
@@ -47,7 +47,7 @@ Stacktrace:
 	at net.minecraft.entity.EntityLivingBase.attackEntityFrom(EntityLivingBase.java:822)
 	at net.minecraft.entity.monster.EntityMob.attackEntityFrom(EntityMob.java:84)
 	at net.minecraft.entity.monster.EntityZombie.attackEntityFrom(EntityZombie.java:251)
-	at yz.acceleratormod.AcceleratorMod.onPlayerAttackEntity(AcceleratorMod.java:93)
+	at yz.acceleratormod.ACCL.onPlayerAttackEntity(AcceleratorMod.java:93)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler_7_AcceleratorMod_onPlayerAttackEntity_AttackEntityEvent.invoke(.dynamic)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
 	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:138)
@@ -69,7 +69,7 @@ Details:
 	Level storage version: 0x00000 - Unknown?
 	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
 	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
-	Forced entities: 4 total; [EntityClientPlayerMP['Player999'/233, l='MpServer', x=603.60, y=5.62, z=-605.24], EntitySlime['ƒXƒ‰ƒCƒ€'/119, l='MpServer', x=615.88, y=4.00, z=-594.21], EntityZombie['ƒ]ƒ“ƒr'/107, l='MpServer', x=603.34, y=4.00, z=-606.03], EntitySlime['ƒXƒ‰ƒCƒ€'/108, l='MpServer', x=602.47, y=4.00, z=-605.24]]
+	Forced entities: 4 total; [EntityClientPlayerMP['Player999'/233, l='MpServer', x=603.60, y=5.62, z=-605.24], EntitySlime['ï¿½Xï¿½ï¿½ï¿½Cï¿½ï¿½'/119, l='MpServer', x=615.88, y=4.00, z=-594.21], EntityZombie['ï¿½]ï¿½ï¿½ï¿½r'/107, l='MpServer', x=603.34, y=4.00, z=-606.03], EntitySlime['ï¿½Xï¿½ï¿½ï¿½Cï¿½ï¿½'/108, l='MpServer', x=602.47, y=4.00, z=-605.24]]
 	Retry entities: 0 total; []
 	Server brand: fml,forge
 	Server type: Integrated singleplayer server
@@ -115,7 +115,7 @@ Shaders are available because OpenGL 2.1 is supported.
 	Is Modded: Definitely; Client brand changed to 'fml,forge'
 	Type: Client (map_client.txt)
 	Resource Packs: []
-	Current Language: “ú–{Œê (“ú–{)
+	Current Language: ï¿½ï¿½ï¿½{ï¿½ï¿½ (ï¿½ï¿½ï¿½{)
 	Profiler Position: N/A (disabled)
 	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
 	Anisotropic Filtering: Off (1)

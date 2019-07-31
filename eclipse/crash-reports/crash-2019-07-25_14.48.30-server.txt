@@ -5,7 +5,7 @@ Time: 19/07/25 14:48
 Description: Ticking memory connection
 
 java.lang.NullPointerException: Ticking memory connection
-	at yz.acceleratormod.AcceleratorMod.onLivingAttackEvent(AcceleratorMod.java:106)
+	at yz.acceleratormod.ACCL.onLivingAttackEvent(AcceleratorMod.java:106)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler_8_AcceleratorMod_onLivingAttackEvent_LivingAttackEvent.invoke(.dynamic)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
 	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:138)
@@ -13,7 +13,7 @@ java.lang.NullPointerException: Ticking memory connection
 	at net.minecraft.entity.EntityLivingBase.attackEntityFrom(EntityLivingBase.java:822)
 	at net.minecraft.entity.monster.EntityMob.attackEntityFrom(EntityMob.java:84)
 	at net.minecraft.entity.monster.EntityZombie.attackEntityFrom(EntityZombie.java:251)
-	at yz.acceleratormod.AcceleratorMod.onPlayerAttackEntity(AcceleratorMod.java:93)
+	at yz.acceleratormod.ACCL.onPlayerAttackEntity(AcceleratorMod.java:93)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler_7_AcceleratorMod_onPlayerAttackEntity_AttackEntityEvent.invoke(.dynamic)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
 	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:138)
@@ -35,7 +35,7 @@ A detailed walkthrough of the error, its code path and all known details is as f
 
 -- Head --
 Stacktrace:
-	at yz.acceleratormod.AcceleratorMod.onLivingAttackEvent(AcceleratorMod.java:106)
+	at yz.acceleratormod.ACCL.onLivingAttackEvent(AcceleratorMod.java:106)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler_8_AcceleratorMod_onLivingAttackEvent_LivingAttackEvent.invoke(.dynamic)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
 	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:138)
@@ -43,7 +43,7 @@ Stacktrace:
 	at net.minecraft.entity.EntityLivingBase.attackEntityFrom(EntityLivingBase.java:822)
 	at net.minecraft.entity.monster.EntityMob.attackEntityFrom(EntityMob.java:84)
 	at net.minecraft.entity.monster.EntityZombie.attackEntityFrom(EntityZombie.java:251)
-	at yz.acceleratormod.AcceleratorMod.onPlayerAttackEntity(AcceleratorMod.java:93)
+	at yz.acceleratormod.ACCL.onPlayerAttackEntity(AcceleratorMod.java:93)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler_7_AcceleratorMod_onPlayerAttackEntity_AttackEntityEvent.invoke(.dynamic)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
 	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:138)

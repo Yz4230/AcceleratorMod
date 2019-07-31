@@ -5,7 +5,7 @@ Time: 19/07/25 12:38
 Description: Ticking entity
 
 java.lang.NullPointerException: Ticking entity
-	at yz.acceleratormod.AcceleratorMod.onExplosionDetonate(AcceleratorMod.java:68)
+	at yz.acceleratormod.ACCL.onExplosionDetonate(AcceleratorMod.java:68)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler_6_AcceleratorMod_onExplosionDetonate_Detonate.invoke(.dynamic)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
 	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:138)
@@ -32,7 +32,7 @@ A detailed walkthrough of the error, its code path and all known details is as f
 
 -- Head --
 Stacktrace:
-	at yz.acceleratormod.AcceleratorMod.onExplosionDetonate(AcceleratorMod.java:68)
+	at yz.acceleratormod.ACCL.onExplosionDetonate(AcceleratorMod.java:68)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler_6_AcceleratorMod_onExplosionDetonate_Detonate.invoke(.dynamic)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
 	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:138)
@@ -50,7 +50,7 @@ Stacktrace:
 Details:
 	Entity Type: Creeper (net.minecraft.entity.monster.EntityCreeper)
 	Entity ID: 197
-	Entity Name: ÉNÉäÅ[ÉpÅ[
+	Entity Name: ÔøΩNÔøΩÔøΩÔøΩ[ÔøΩpÔøΩ[
 	Entity's Exact location: 472.86, 1.00, 785.00
 	Entity's Block location: World: (472,1,785), Chunk: (at 8,0,1 in 29,49; contains blocks 464,0,784 to 479,255,799), Region: (0,1; contains chunks 0,32 to 31,63, blocks 0,0,512 to 511,255,1023)
 	Entity's Momentum: 0.00, -0.08, 0.00

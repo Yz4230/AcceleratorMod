@@ -18,14 +18,13 @@ import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.world.ExplosionEvent;
-import yz.acceleratormod.keymgr.KeyManager;
+import yz.acceleratormod.armor.AcceleratorArmor;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
 public class ChokerFunctions {
-    public static boolean activated = false;
     public static List<String> entityList = new ArrayList<String>();
     public static List<Entity> entityToReflecting = new ArrayList<Entity>();
     public static String[] defalutEntityToReflect =
@@ -33,16 +32,17 @@ public class ChokerFunctions {
 
     @SubscribeEvent
     public void inputKey(InputEvent.KeyInputEvent event) {
-        if (KeyManager.chokerButton.isPressed() && isWearingChoker()) {
-            activated = !activated;
+        if (false) {
+            AcceleratorArmor armor = (AcceleratorArmor) getPlayerHeadArmor();
+            armor.switchMode();
             EntityClientPlayerMP entityPlayer = Minecraft.getMinecraft().thePlayer;
-            entityPlayer.sendChatMessage("Choker was " + (activated ? "Enabled" : "Disabled"));
+            //entityPlayer.sendChatMessage("Choker was " + (armor.isActivated() ? "Enabled" : "Disabled"));
         }
     }
 
     @SubscribeEvent
     public void onExplosionDetonate(ExplosionEvent.Detonate event) {
-        if (isActivated()) {
+        if (this.isActivated()) {
             EntityPlayer entityPlayer = Minecraft.getMinecraft().thePlayer;
             Iterator<Entity> entity_iter = event.getAffectedEntities().iterator();
             while (entity_iter.hasNext()) {
@@ -54,7 +54,7 @@ public class ChokerFunctions {
             while (block_iter.hasNext()) {
                 ChunkPosition current_block = block_iter.next();
                 if (current_block.chunkPosX == Math.floor(entityPlayer.posX) &&
-                    current_block.chunkPosZ == Math.floor(entityPlayer.posZ)) {
+                        current_block.chunkPosZ == Math.floor(entityPlayer.posZ)) {
                     block_iter.remove();
                 }
             }
@@ -66,7 +66,7 @@ public class ChokerFunctions {
         EntityLivingBase recieveEntity = event.entityLiving;
         Entity giveEntity = event.source.getEntity();
 
-        if (isActivated()) {
+        if (this.isActivated()) {
             if (recieveEntity instanceof EntityPlayer) {
                 if (event.source.equals(DamageSource.fall))
                     event.setCanceled(true);
@@ -79,7 +79,7 @@ public class ChokerFunctions {
     public void onLivingHurtEvent(LivingHurtEvent event) {
         EntityLivingBase recieveEntity = event.entityLiving;
         Entity giveEntity = event.source.getEntity();
-        if (isActivated()) {
+        if (this.isActivated()) {
             if (recieveEntity instanceof EntityPlayer) {
                 if (giveEntity instanceof EntityLivingBase) {
                     giveEntity.attackEntityFrom(DamageSource.generic, event.ammount * 2);
@@ -108,8 +108,7 @@ public class ChokerFunctions {
             if (entity.getDistanceToEntity(Minecraft.getMinecraft().thePlayer) < 1)
                 refList.add(entity);
         }
-        if (KeyManager.function.getIsKeyPressed()) {
-            KeyManager.function.isPressed();
+        if (/*KeyManager.functionKey.getIsKeyPressed() && */((AcceleratorArmor) getPlayerHeadArmor()).isActivated()) {
             entityToReflecting.removeAll(refList);
             for (Entity entity : refList) {
                 entity.motionX = -entity.motionX;
@@ -121,10 +120,12 @@ public class ChokerFunctions {
 
     public boolean isActivated() {
         EntityPlayer entityPlayer = Minecraft.getMinecraft().thePlayer;
-        if (entityPlayer.getCurrentArmor(3) == null || !activated)
+        if (entityPlayer.getCurrentArmor(3) == null)
             return false;
-        ItemArmor itemArmor = (ItemArmor)getPlayerHeadArmor();
-        return itemArmor instanceof AcceleratorArmor && ((AcceleratorArmor)itemArmor).battery_remain != 0;
+        ItemArmor itemArmor = (ItemArmor) getPlayerHeadArmor();
+        if (!(itemArmor instanceof AcceleratorArmor) || ((AcceleratorArmor) itemArmor).battery_remain == 0)
+            return false;
+        return ((AcceleratorArmor) itemArmor).isActivated();
     }
 
     public boolean isWearingChoker() {
@@ -134,7 +135,7 @@ public class ChokerFunctions {
         return getPlayerHeadArmor() instanceof AcceleratorArmor;
     }
 
-    private Item getPlayerHeadArmor() {
+    public static Item getPlayerHeadArmor() {
         EntityPlayer entityPlayer = Minecraft.getMinecraft().thePlayer;
         return entityPlayer.getCurrentArmor(3).getItem();
     }

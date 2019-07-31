@@ -5,7 +5,7 @@ Time: 19/07/25 15:34
 Description: Ticking entity
 
 java.lang.NullPointerException: Ticking entity
-	at yz.acceleratormod.AcceleratorMod.onLivingAttackEvent(AcceleratorMod.java:110)
+	at yz.acceleratormod.ACCL.onLivingAttackEvent(AcceleratorMod.java:110)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler_6_AcceleratorMod_onLivingAttackEvent_LivingAttackEvent.invoke(.dynamic)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
 	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:138)
@@ -13,7 +13,7 @@ java.lang.NullPointerException: Ticking entity
 	at net.minecraft.entity.EntityLivingBase.attackEntityFrom(EntityLivingBase.java:822)
 	at net.minecraft.entity.monster.EntityMob.attackEntityFrom(EntityMob.java:84)
 	at net.minecraft.entity.monster.EntityZombie.attackEntityFrom(EntityZombie.java:251)
-	at yz.acceleratormod.AcceleratorMod.onLivingAttackEvent(AcceleratorMod.java:110)
+	at yz.acceleratormod.ACCL.onLivingAttackEvent(AcceleratorMod.java:110)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler_6_AcceleratorMod_onLivingAttackEvent_LivingAttackEvent.invoke(.dynamic)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
 	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:138)
@@ -50,7 +50,7 @@ A detailed walkthrough of the error, its code path and all known details is as f
 
 -- Head --
 Stacktrace:
-	at yz.acceleratormod.AcceleratorMod.onLivingAttackEvent(AcceleratorMod.java:110)
+	at yz.acceleratormod.ACCL.onLivingAttackEvent(AcceleratorMod.java:110)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler_6_AcceleratorMod_onLivingAttackEvent_LivingAttackEvent.invoke(.dynamic)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
 	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:138)
@@ -58,7 +58,7 @@ Stacktrace:
 	at net.minecraft.entity.EntityLivingBase.attackEntityFrom(EntityLivingBase.java:822)
 	at net.minecraft.entity.monster.EntityMob.attackEntityFrom(EntityMob.java:84)
 	at net.minecraft.entity.monster.EntityZombie.attackEntityFrom(EntityZombie.java:251)
-	at yz.acceleratormod.AcceleratorMod.onLivingAttackEvent(AcceleratorMod.java:110)
+	at yz.acceleratormod.ACCL.onLivingAttackEvent(AcceleratorMod.java:110)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler_6_AcceleratorMod_onLivingAttackEvent_LivingAttackEvent.invoke(.dynamic)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
 	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:138)
@@ -86,7 +86,7 @@ Stacktrace:
 Details:
 	Entity Type: Zombie (net.minecraft.entity.monster.EntityZombie)
 	Entity ID: 114
-	Entity Name: ƒ]ƒ“ƒr
+	Entity Name: ï¿½]ï¿½ï¿½ï¿½r
 	Entity's Exact location: 588.15, 4.00, -510.77
 	Entity's Block location: World: (588,4,-511), Chunk: (at 12,0,1 in 36,-32; contains blocks 576,0,-512 to 591,255,-497), Region: (1,-1; contains chunks 32,-32 to 63,-1, blocks 512,0,-512 to 1023,255,-1)
 	Entity's Momentum: 0.00, -0.08, 0.00

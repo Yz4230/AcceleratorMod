@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="8" />
+    <option name="CUSTOM_SCOPE_NAME" value="Project Files" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="eeab22d0-007c-4c1b-bd41-7af973a77684" name="Default Changelist" comment="Sync Client and Server's Key State">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/acceleratormod/textures/armor/accelerator_armor_on.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/acceleratormod/textures/items/choker_on.png" afterDir="false" />
+    <list default="true" id="eeab22d0-007c-4c1b-bd41-7af973a77684" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/TickHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/armor/AcceleratorArmor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/keymgr/KeyManagerClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/tool/YzUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.2.1/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.2.1/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.2.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.2.1/fileHashes/fileHashes.lock" afterDir="false" />
@@ -13,11 +18,50 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.2.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.2.1/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/AcceleratorMod.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/AcceleratorMod.main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eclipse/config/splash.properties" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/config/splash.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_00.29.24-client.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_00.29.24-client.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_00.32.05-client.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_00.32.05-client.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_00.33.31-client.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_00.33.31-client.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_00.37.09-client.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_00.37.09-client.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_00.39.57-client.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_00.39.57-client.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_00.41.44-client.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_00.41.44-client.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_00.45.36-client.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_00.45.36-client.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_00.46.42-client.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_00.46.42-client.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_00.47.18-client.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_00.47.18-client.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_12.22.19-server.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_12.22.19-server.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_12.38.22-server.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_12.38.22-server.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_12.38.49-server.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_12.38.49-server.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_14.44.04-client.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_14.44.04-client.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_14.44.28-client.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_14.44.28-client.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_14.45.36-server.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_14.45.36-server.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_14.47.10-server.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_14.47.10-server.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_14.48.06-server.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_14.48.06-server.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_14.48.30-client.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_14.48.30-client.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_14.48.30-server.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_14.48.30-server.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_14.49.34-server.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_14.49.34-server.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_14.51.23-server.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_14.51.23-server.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_14.55.36-server.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_14.55.36-server.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_14.57.01-server.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_14.57.01-server.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_14.58.25-server.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_14.58.25-server.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_15.00.54-server.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_15.00.54-server.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_15.02.02-client.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_15.02.02-client.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_15.02.40-client.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_15.02.40-client.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_15.04.01-server.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_15.04.01-server.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_15.04.47-client.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_15.04.47-client.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_15.33.55-server.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_15.33.55-server.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_15.34.31-server.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_15.34.31-server.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_15.37.33-server.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_15.37.33-server.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_15.39.07-client.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_15.39.07-client.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_15.39.35-client.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_15.39.35-client.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_15.42.35-server.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_15.42.35-server.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_15.43.25-server.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_15.43.25-server.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_15.44.19-server.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_15.44.19-server.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_15.45.27-server.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_15.45.27-server.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_15.46.30-client.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_15.46.30-client.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_15.49.04-client.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_15.49.04-client.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_23.09.07-client.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-25_23.09.07-client.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-26_10.04.00-client.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/crash-reports/crash-2019-07-26_10.04.00-client.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eclipse/logs/fml-client-1.log" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/logs/fml-client-1.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eclipse/logs/fml-client-2.log" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/logs/fml-client-2.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eclipse/logs/fml-client-3.log" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/logs/fml-client-3.log" afterDir="false" />
@@ -32,12 +76,13 @@
       <change beforePath="$PROJECT_DIR$/eclipse/saves/New World/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/saves/New World/level.dat_old" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eclipse/saves/New World/session.lock" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/saves/New World/session.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eclipse/usernamecache.json" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/usernamecache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/AcceleratorArmor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/AcceleratorArmor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/AcceleratorMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/AcceleratorMod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/AcceleratorArmor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/AcceleratorMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/ACCL.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/ChokerFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/ChokerFunctions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/keymgr/KeyManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/keymgr/KeyManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/acceleratormod/lang/en_US.lang" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/acceleratormod/lang/en_US.lang" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/acceleratormod/lang/ja_JP.lang" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/acceleratormod/lang/ja_JP.lang" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/keymgr/MessageKeyPressed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/keymgr/MessageKeyPressed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/keymgr/MessageKeyPressedHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/keymgr/KeyInfoGetter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/keymgr/PacketHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/keymgr/PacketHandler.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -209,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564321892725</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add Reflection">
+      <created>1564495423743</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1564495423743</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -242,11 +294,14 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="Add PacketHandler" />
     <MESSAGE value="Sync Client and Server's Key State" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sync Client and Server's Key State" />
+    <MESSAGE value="Add Reflection" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Reflection" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
       <configuration name="Remote">
+        <watch expression="entity_iter" />
         <watch expression="entity_iter" />
       </configuration>
     </watches-manager>

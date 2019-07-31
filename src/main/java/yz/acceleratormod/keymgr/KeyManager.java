@@ -1,29 +1,57 @@
 package yz.acceleratormod.keymgr;
 
-import cpw.mods.fml.client.registry.ClientRegistry;
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import cpw.mods.fml.common.gameevent.InputEvent;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.client.settings.KeyBinding;
-import org.lwjgl.input.Keyboard;
+import net.minecraft.entity.player.EntityPlayer;
+
+import java.util.EnumSet;
+import java.util.Map;
+import java.util.Set;
+import java.util.WeakHashMap;
 
 public class KeyManager {
-    public static final KeyBinding chokerButton = new KeyBinding("key.choker.button", Keyboard.KEY_F, "key.acceleratormod");
-    public static final KeyBinding function = new KeyBinding("key.choker.reflect", Keyboard.KEY_R, "key.acceleratormod");
+    public Map<EntityPlayer, Set<Key>> playerKeys = new WeakHashMap<>();
 
-    public static void init() {
-        PacketHandler.init(0);
-        ClientRegistry.registerKeyBinding(chokerButton);
-        ClientRegistry.registerKeyBinding(function);
+    public boolean isPowerKeyDown(EntityPlayer player) {
+        return this.get(player, Key.power);
     }
 
-    @SideOnly(Side.CLIENT)
-    @SubscribeEvent
-    public void onKeyInput(InputEvent.KeyInputEvent event) {
-        if (chokerButton.isPressed())
-            PacketHandler.INSTANCE.sendToServer(new MessageKeyPressed(chokerButton.getKeyCode()));
-        if (function.isPressed())
-            PacketHandler.INSTANCE.sendToServer(new MessageKeyPressed(function.getKeyCode()));
+    public boolean isReflectKeyDown(EntityPlayer player) {
+        return this.get(player, Key.reflect);
+    }
+
+    public boolean isFunctionKeyDown(EntityPlayer player) {
+        return this.get(player, Key.reflect);
+    }
+
+    private boolean get(EntityPlayer player, Key key) {
+        Set<Key> keys = this.playerKeys.get(player);
+        if (keys == null)
+            return false;
+        return keys.contains(key);
+    }
+
+    public void processKeyUpdate(EntityPlayer player, int keyState) {
+        this.playerKeys.put(player, Key.fromInt(keyState));
+    }
+
+    public enum Key {
+        power,
+        reflect,
+        function;
+
+        public static int toInt(Iterable<Key> keySet) {
+            int ret = 0;
+            for (Key key : keySet)
+                ret |= 1 << key.ordinal();
+            return ret;
+        }
+
+        public static Set<Key> fromInt(int keyState) {
+            Set<Key> ret = EnumSet.noneOf(Key.class);
+            for (int i = 0; keyState != 0; i++, keyState >>= 1) {
+                if ((keyState & 1) != 0)
+                    ret.add(Key.values()[i]);
+            }
+            return ret;
+        }
     }
 }

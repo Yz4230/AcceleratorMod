@@ -5,14 +5,14 @@ Time: 19/07/25 15:00
 Description: Ticking entity
 
 java.lang.NullPointerException: Ticking entity
-	at yz.acceleratormod.AcceleratorMod.onLivingAttackEvent(AcceleratorMod.java:108)
+	at yz.acceleratormod.ACCL.onLivingAttackEvent(AcceleratorMod.java:108)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler_7_AcceleratorMod_onLivingAttackEvent_LivingAttackEvent.invoke(.dynamic)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
 	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:138)
 	at net.minecraftforge.common.ForgeHooks.onLivingAttack(ForgeHooks.java:294)
 	at net.minecraft.entity.EntityLivingBase.attackEntityFrom(EntityLivingBase.java:822)
 	at net.minecraft.entity.monster.EntityMob.attackEntityFrom(EntityMob.java:84)
-	at yz.acceleratormod.AcceleratorMod.onLivingAttackEvent(AcceleratorMod.java:108)
+	at yz.acceleratormod.ACCL.onLivingAttackEvent(AcceleratorMod.java:108)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler_7_AcceleratorMod_onLivingAttackEvent_LivingAttackEvent.invoke(.dynamic)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
 	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:138)
@@ -41,14 +41,14 @@ A detailed walkthrough of the error, its code path and all known details is as f
 
 -- Head --
 Stacktrace:
-	at yz.acceleratormod.AcceleratorMod.onLivingAttackEvent(AcceleratorMod.java:108)
+	at yz.acceleratormod.ACCL.onLivingAttackEvent(AcceleratorMod.java:108)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler_7_AcceleratorMod_onLivingAttackEvent_LivingAttackEvent.invoke(.dynamic)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
 	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:138)
 	at net.minecraftforge.common.ForgeHooks.onLivingAttack(ForgeHooks.java:294)
 	at net.minecraft.entity.EntityLivingBase.attackEntityFrom(EntityLivingBase.java:822)
 	at net.minecraft.entity.monster.EntityMob.attackEntityFrom(EntityMob.java:84)
-	at yz.acceleratormod.AcceleratorMod.onLivingAttackEvent(AcceleratorMod.java:108)
+	at yz.acceleratormod.ACCL.onLivingAttackEvent(AcceleratorMod.java:108)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler_7_AcceleratorMod_onLivingAttackEvent_LivingAttackEvent.invoke(.dynamic)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
 	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:138)
@@ -68,7 +68,7 @@ Stacktrace:
 Details:
 	Entity Type: Creeper (net.minecraft.entity.monster.EntityCreeper)
 	Entity ID: 45952
-	Entity Name: ÉNÉäÅ[ÉpÅ[
+	Entity Name: ÔøΩNÔøΩÔøΩÔøΩ[ÔøΩpÔøΩ[
 	Entity's Exact location: 584.50, 4.00, -570.50
 	Entity's Block location: World: (584,4,-571), Chunk: (at 8,0,5 in 36,-36; contains blocks 576,0,-576 to 591,255,-561), Region: (1,-2; contains chunks 32,-64 to 63,-33, blocks 512,0,-1024 to 1023,255,-513)
 	Entity's Momentum: 0.00, -0.08, 0.00

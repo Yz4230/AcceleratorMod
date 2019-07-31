@@ -4,13 +4,13 @@
 Time: 19/07/25 23:09
 Description: Unexpected error
 
-java.lang.IllegalArgumentException: The name AcceleratorMod:choker has been registered twice, for yz.acceleratormod.AcceleratorArmor@751636da and yz.acceleratormod.AcceleratorArmor@17eb5858.
+java.lang.IllegalArgumentException: The name AcceleratorMod:choker has been registered twice, for yz.acceleratormod.armor.AcceleratorArmor@751636da and yz.acceleratormod.armor.AcceleratorArmor@17eb5858.
 	at cpw.mods.fml.common.registry.FMLControlledNamespacedRegistry.add(FMLControlledNamespacedRegistry.java:402)
 	at cpw.mods.fml.common.registry.GameData.registerItem(GameData.java:845)
 	at cpw.mods.fml.common.registry.GameData.registerItem(GameData.java:808)
 	at cpw.mods.fml.common.registry.GameRegistry.registerItem(GameRegistry.java:149)
 	at cpw.mods.fml.common.registry.GameRegistry.registerItem(GameRegistry.java:137)
-	at yz.acceleratormod.AcceleratorMod.changeDefence(AcceleratorMod.java:76)
+	at yz.acceleratormod.ACCL.changeDefence(AcceleratorMod.java:76)
 	at yz.acceleratormod.ChokerFunctions.inputKey(ChokerFunctions.java:32)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler_6_ChokerFunctions_inputKey_KeyInputEvent.invoke(.dynamic)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
@@ -40,7 +40,7 @@ Stacktrace:
 	at cpw.mods.fml.common.registry.GameData.registerItem(GameData.java:808)
 	at cpw.mods.fml.common.registry.GameRegistry.registerItem(GameRegistry.java:149)
 	at cpw.mods.fml.common.registry.GameRegistry.registerItem(GameRegistry.java:137)
-	at yz.acceleratormod.AcceleratorMod.changeDefence(AcceleratorMod.java:76)
+	at yz.acceleratormod.ACCL.changeDefence(AcceleratorMod.java:76)
 	at yz.acceleratormod.ChokerFunctions.inputKey(ChokerFunctions.java:32)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler_6_ChokerFunctions_inputKey_KeyInputEvent.invoke(.dynamic)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)

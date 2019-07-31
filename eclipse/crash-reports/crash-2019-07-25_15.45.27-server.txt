@@ -5,7 +5,7 @@ Time: 19/07/25 15:45
 Description: Ticking entity
 
 java.lang.NullPointerException: Ticking entity
-	at yz.acceleratormod.AcceleratorMod.onLivingAttackEvent(AcceleratorMod.java:110)
+	at yz.acceleratormod.ACCL.onLivingAttackEvent(AcceleratorMod.java:110)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler_8_AcceleratorMod_onLivingAttackEvent_LivingAttackEvent.invoke(.dynamic)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
 	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:138)
@@ -38,7 +38,7 @@ A detailed walkthrough of the error, its code path and all known details is as f
 
 -- Head --
 Stacktrace:
-	at yz.acceleratormod.AcceleratorMod.onLivingAttackEvent(AcceleratorMod.java:110)
+	at yz.acceleratormod.ACCL.onLivingAttackEvent(AcceleratorMod.java:110)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler_8_AcceleratorMod_onLivingAttackEvent_LivingAttackEvent.invoke(.dynamic)
 	at cpw.mods.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:54)
 	at cpw.mods.fml.common.eventhandler.EventBus.post(EventBus.java:138)
@@ -62,7 +62,7 @@ Stacktrace:
 Details:
 	Entity Type: Zombie (net.minecraft.entity.monster.EntityZombie)
 	Entity ID: 277
-	Entity Name: ƒ]ƒ“ƒr
+	Entity Name: ï¿½]ï¿½ï¿½ï¿½r
 	Entity's Exact location: 691.39, 4.00, -569.67
 	Entity's Block location: World: (691,4,-570), Chunk: (at 3,0,6 in 43,-36; contains blocks 688,0,-576 to 703,255,-561), Region: (1,-2; contains chunks 32,-64 to 63,-33, blocks 512,0,-1024 to 1023,255,-513)
 	Entity's Momentum: 0.00, -0.08, 0.00
