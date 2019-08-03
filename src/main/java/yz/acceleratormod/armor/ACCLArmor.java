@@ -13,6 +13,8 @@ import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 import yz.acceleratormod.ACCL;
 import yz.acceleratormod.ChokerFunction;
+import yz.acceleratormod.sound.SoundAtEntity;
+import yz.acceleratormod.sound.SoundManager;
 import yz.acceleratormod.tool.YzUtil;
 
 import java.util.List;
@@ -78,7 +80,10 @@ public class ACCLArmor extends ItemArmor {
             if (!world.isRemote) {
                 player.addChatComponentMessage(new ChatComponentText("The choker was " + (nbt.getBoolean(activeTag) ? "enabled" : "disabled" + ".")));
                 if (nbt.getBoolean(activeTag))
-                    world.playSoundAtEntity(player, ACCL.MOD_ID + ":power_btn", 1.F, 1.F);
+                SoundManager.Play(new SoundAtEntity(ACCL.powerBtnSnd, player, 1.F, 1.F));
+            }
+            if (nbt.getBoolean(activeTag)) {
+                player.capabilities.allowFlying = nbt.getBoolean(activeTag);
             }
         }
 
@@ -86,6 +91,7 @@ public class ACCLArmor extends ItemArmor {
             player.capabilities.setPlayerWalkSpeed(0.18F);
         else
             player.capabilities.setPlayerWalkSpeed(0.1F);
+
         if (nbt.getInteger(toggleDelayTag) > 0)
             nbt.setInteger(toggleDelayTag, nbt.getInteger(toggleDelayTag) - 1);
         nbt.setInteger(battRemainTag, nbt.getInteger(battRemainTag) - (nbt.getBoolean(activeTag) ? 10 : 1));

@@ -1,4 +1,4 @@
-package yz.acceleratormod.keymgr;
+package yz.acceleratormod.network.keymgr;
 
 import cpw.mods.fml.common.network.simpleimpl.IMessage;
 import cpw.mods.fml.common.network.simpleimpl.IMessageHandler;
@@ -12,6 +12,7 @@ import yz.acceleratormod.ACCL;
 public class KeyStateSyncer implements IMessage, IMessageHandler<KeyStateSyncer, IMessage> {
     public int keyState;
     public int playerID;
+
     public KeyStateSyncer(){}
 
     public KeyStateSyncer(int keyPressed, int playerID) {

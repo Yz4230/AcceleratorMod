@@ -1,4 +1,4 @@
-package yz.acceleratormod.keymgr;
+package yz.acceleratormod.network.keymgr;
 
 import net.minecraft.entity.player.EntityPlayer;
 

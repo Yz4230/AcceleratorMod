@@ -13,12 +13,13 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.util.EnumHelper;
 import yz.acceleratormod.armor.ACCLArmor;
-import yz.acceleratormod.keymgr.KeyManager;
-import yz.acceleratormod.keymgr.PacketHandler;
+import yz.acceleratormod.network.PacketHandler;
+import yz.acceleratormod.network.keymgr.KeyManager;
 
 import java.util.Arrays;
 
@@ -27,14 +28,16 @@ public class ACCL {
     public static final String MOD_ID = "acceleratormod";
     public static final String MOD_NAME = "Accelerator Mod";
     public static final String MOD_VERSION = "19.07.14";
+    public static final ItemArmor.ArmorMaterial CHOKER = EnumHelper.addArmorMaterial("ACC_ARM", 100, new int[]{1, 0, 0, 0}, 0);
+    public static final int HELMET = 0;
+    public static final ResourceLocation powerBtnSnd = new ResourceLocation(ACCL.MOD_ID, "power_btn");
+    public static final ResourceLocation reflectionSnd = new ResourceLocation(ACCL.MOD_ID, "reflection");
+    public static final ResourceLocation strongPunchSnd = new ResourceLocation(ACCL.MOD_ID, "strong_punch");
 
+    @SidedProxy(clientSide = "yz.acceleratormod.network.keymgr.KeyManagerClient", serverSide = "yz.acceleratormod.network.keymgr.KeyManager")
+    public static KeyManager keyManager;
     public static Item choker;
     public static Item battery;
-    @SidedProxy(clientSide = "yz.acceleratormod.keymgr.KeyManagerClient", serverSide = "yz.acceleratormod.keymgr.KeyManager")
-    public static KeyManager keyManager;
-
-    public static final int HELMET = 0;
-    public static final ItemArmor.ArmorMaterial CHOKER = EnumHelper.addArmorMaterial("ACC_ARM", 100, new int[]{1, 0, 0, 0}, 0);
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
@@ -51,19 +54,15 @@ public class ACCL {
         GameRegistry.registerItem(battery, "battery");
 
         Configuration cfg = new Configuration(event.getSuggestedConfigurationFile(), ACCL.MOD_VERSION, true);
-        try {
-            cfg.load();
-            String[] entityIdRaw = cfg.getStringList("entity_IDs", "Choker Settings",
-                    ChokerFunction.defalutEntityToReflect, "Entity IDs to reflect");
-            ChokerFunction.entityList.addAll(Arrays.asList(ChokerFunction.defalutEntityToReflect));
-            ChokerFunction.entityList.addAll(Arrays.asList(entityIdRaw));
-        } finally {
-            cfg.save();
-        }
+        cfg.load();
+        String[] entityIdRaw = cfg.getStringList("entity_IDs", "Choker Settings",
+                ChokerFunction.defaultEntityToReflect, "Entity IDs to reflect");
+        ChokerFunction.entityList.addAll(Arrays.asList(ChokerFunction.defaultEntityToReflect));
+        ChokerFunction.entityList.addAll(Arrays.asList(entityIdRaw));
+        cfg.save();
 
         PacketHandler.init();
         MinecraftForge.EVENT_BUS.register(new ChokerFunction());
-        FMLCommonHandler.instance().bus().register(new ChokerFunction());
         FMLCommonHandler.instance().bus().register(new TickHandler());
     }
 
@@ -77,6 +76,16 @@ public class ACCL {
         GameRegistry.addRecipe(new ItemStack(ACCL.battery, 4),
                 " A ", "ABA", " A ",
                 'A', Items.iron_ingot, 'B', Items.redstone);
+        /*try {
+            FileWriter fileWriter = new FileWriter("EntityList.txt");
+            fileWriter.flush();
+            for (Object entity : EntityList.stringToClassMapping.keySet()) {
+                fileWriter.write(entity + "\n");
+            }
+            fileWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }*/
     }
 }
 

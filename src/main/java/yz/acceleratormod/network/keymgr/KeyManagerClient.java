@@ -1,4 +1,4 @@
-package yz.acceleratormod.keymgr;
+package yz.acceleratormod.network.keymgr;
 
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.relauncher.Side;
@@ -8,6 +8,7 @@ import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.settings.GameSettings;
 import net.minecraft.client.settings.KeyBinding;
 import org.lwjgl.input.Keyboard;
+import yz.acceleratormod.network.PacketHandler;
 
 import java.util.EnumSet;
 import java.util.Set;
@@ -26,6 +27,7 @@ public class KeyManagerClient extends KeyManager {
         ClientRegistry.registerKeyBinding(this.functionKey);
     }
 
+    @SideOnly(Side.CLIENT)
     public void sendKeyUpdate() {
         Set<KeyManager.Key> keys = EnumSet.noneOf(KeyManager.Key.class);
         GuiScreen guiScreen = Minecraft.getMinecraft().currentScreen;
@@ -40,7 +42,7 @@ public class KeyManagerClient extends KeyManager {
         int currentKeyState = KeyManager.Key.toInt(keys);
         if (currentKeyState != this.lastKeyState) {
             this.processKeyUpdate(Minecraft.getMinecraft().thePlayer, currentKeyState);
-            PacketHandler.INSTANCE.sendToServer(
+            PacketHandler.INST_keyState.sendToServer(
                     new KeyStateSyncer(currentKeyState, Minecraft.getMinecraft().thePlayer.getEntityId()));
             this.lastKeyState = currentKeyState;
         }

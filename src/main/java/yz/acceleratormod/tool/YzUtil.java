@@ -17,11 +17,11 @@ public class YzUtil {
         return nbt;
     }
 
-    public static boolean isServer() {
+    public static boolean isLgServer() {
         return FMLCommonHandler.instance().getEffectiveSide().isServer();
     }
 
-    public static boolean isClient() {
+    public static boolean isLgClient() {
         return FMLCommonHandler.instance().getEffectiveSide().isClient();
     }
 
