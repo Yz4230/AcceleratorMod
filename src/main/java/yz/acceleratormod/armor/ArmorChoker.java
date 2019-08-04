@@ -19,7 +19,7 @@ import yz.acceleratormod.tool.YzUtil;
 
 import java.util.List;
 
-public class ACCLArmor extends ItemArmor {
+public class ArmorChoker extends ItemArmor {
     public static final int battery_capacity = 72000;
 
     public static final String activeTag = "active";
@@ -30,7 +30,7 @@ public class ACCLArmor extends ItemArmor {
     @SideOnly(Side.CLIENT)
     private IIcon[] iicon = new IIcon[2];
 
-    public ACCLArmor(ItemArmor.ArmorMaterial material, int armorType) {
+    public ArmorChoker(ItemArmor.ArmorMaterial material, int armorType) {
         super(material, 0, armorType);
         this.setMaxDamage(0);
         this.setNoRepair();
@@ -46,15 +46,23 @@ public class ACCLArmor extends ItemArmor {
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister iIconRegister) {
-        this.iicon[0] = iIconRegister.registerIcon("acceleratormod:choker");
-        this.iicon[1] = iIconRegister.registerIcon("acceleratormod:choker_on");
+    public void registerIcons(IIconRegister register) {
+        this.iicon[0] = register.registerIcon(ACCL.MOD_ID + ":choker/choker");
+        this.iicon[1] = register.registerIcon(ACCL.MOD_ID + ":choker/choker_on");
     }
 
     @Override
     @SideOnly(Side.CLIENT)
     public IIcon getIconIndex(ItemStack itemStack) {
         NBTTagCompound nbt = YzUtil.getNBTTag(itemStack);
+        if (nbt.getBoolean(activeTag) && nbt.getInteger(battRemainTag) > 0)
+            return this.iicon[1];
+        return this.iicon[0];
+    }
+
+    @Override
+    public IIcon getIcon(ItemStack stack, int pass) {
+        NBTTagCompound nbt = YzUtil.getNBTTag(stack);
         if (nbt.getBoolean(activeTag) && nbt.getInteger(battRemainTag) > 0)
             return this.iicon[1];
         return this.iicon[0];

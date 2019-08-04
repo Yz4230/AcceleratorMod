@@ -6,11 +6,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eeab22d0-007c-4c1b-bd41-7af973a77684" name="Default Changelist" comment="Completed Functions">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/yz.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/network/reflection/ReflectionSyncer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/particle/ReflectParticle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/sound/SoundAtEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/sound/SoundManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/item/ItemBattery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/acceleratormod/textures/items/battery/battery_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/acceleratormod/textures/items/battery/battery_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/acceleratormod/textures/items/battery/battery_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/acceleratormod/textures/items/battery/battery_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/acceleratormod/textures/items/battery/battery_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/acceleratormod/textures/items/battery/battery_5.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.2.1/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.2.1/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.2.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.2.1/fileHashes/fileHashes.lock" afterDir="false" />
@@ -18,8 +20,9 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.2.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.2.1/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.2.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.2.1/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eclipse/config/splash.properties" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/config/splash.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eclipse/logs/fml-client-1.log" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/logs/fml-client-1.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eclipse/logs/fml-client-2.log" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/logs/fml-client-2.log" afterDir="false" />
@@ -30,14 +33,12 @@
       <change beforePath="$PROJECT_DIR$/eclipse/usernamecache.json" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/usernamecache.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/ACCL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/ACCL.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/ChokerFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/ChokerFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/Debugtool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/tool/DebugTool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/TickHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/TickHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/armor/ACCLArmor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/armor/ACCLArmor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/keymgr/KeyManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/network/keymgr/KeyManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/keymgr/KeyManagerClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/network/keymgr/KeyManagerClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/keymgr/KeyStateSyncer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/network/keymgr/KeyStateSyncer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/keymgr/PacketHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/network/PacketHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/armor/ACCLArmor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/armor/ArmorChoker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/particle/ReflectParticle.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/tool/YzUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/tool/YzUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/acceleratormod/textures/items/battery.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/acceleratormod/textures/items/choker.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/acceleratormod/textures/items/choker/choker.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/acceleratormod/textures/items/choker_on.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/acceleratormod/textures/items/choker/choker_on.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -118,6 +119,24 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="StrongFoot" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1OVPBsrUyZ4p0Zfw3IRmL5CCPof" />
@@ -132,22 +151,22 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.smartKeys" />
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="yz.acceleratormod" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\modding\AcceleratorMod\src\main\resources\assets\acceleratormod\textures\items\battery" />
+      <recent name="D:\modding\AcceleratorMod\src\main\resources\assets\acceleratormod\textures\items\choker" />
       <recent name="D:\modding\AcceleratorMod\src\main\resources\assets\acceleratormod\sounds" />
       <recent name="D:\modding\AcceleratorMod\src\main\resources\assets\acceleratormod\textures\armor" />
       <recent name="D:\modding\AcceleratorMod\src\main\resources\assets\acceleratormod\textures\items" />
-      <recent name="D:\modding\AcceleratorMod\eclipse\mods" />
-      <recent name="D:\modding\AcceleratorMod\src\main\resources\assets\acceleratormod\textures" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -184,6 +203,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.AcceleratorMod [runClient]" />
+        <item itemvalue="Gradle.AcceleratorMod [runClient]" />
+        <item itemvalue="Gradle.AcceleratorMod [runClient]" />
+        <item itemvalue="Gradle.AcceleratorMod [runClient]" />
         <item itemvalue="Gradle.AcceleratorMod [runClient]" />
       </list>
     </recent_temporary>
@@ -234,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564679824976</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Completed Functions">
+      <created>1564844140411</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1564844140411</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -443,7 +473,8 @@
     <MESSAGE value="Add Reflection" />
     <MESSAGE value="Update Keyboard Input Method" />
     <MESSAGE value="Add Sounds" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Sounds" />
+    <MESSAGE value="Completed Functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed Functions" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -455,7 +486,7 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/AcceleratorMod$AcceleratorMod__runClient_.ic" NAME="AcceleratorMod [runClient] Coverage Results" MODIFIED="1564032169413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AcceleratorMod$AcceleratorMod__runClient_.ic" NAME="AcceleratorMod [runClient] Coverage Results" MODIFIED="1564890804404" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="regexState">
     <option name="map">

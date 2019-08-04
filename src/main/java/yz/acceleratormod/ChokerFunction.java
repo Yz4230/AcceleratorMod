@@ -18,7 +18,7 @@ import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.world.ExplosionEvent;
-import yz.acceleratormod.armor.ACCLArmor;
+import yz.acceleratormod.armor.ArmorChoker;
 import yz.acceleratormod.network.PacketHandler;
 import yz.acceleratormod.network.reflection.ReflectionSyncer;
 import yz.acceleratormod.sound.SoundAtEntity;
@@ -142,9 +142,9 @@ public class ChokerFunction {
         if (player.getCurrentArmor(3) == null)
             return false;
         NBTTagCompound nbt = YzUtil.getNBTTag(this.getPlayerHeadArmor(player));
-        if (nbt.getInteger(ACCLArmor.battRemainTag) == 0)
+        if (nbt.getInteger(ArmorChoker.battRemainTag) == 0)
             return false;
-        return nbt.getBoolean(ACCLArmor.activeTag);
+        return nbt.getBoolean(ArmorChoker.activeTag);
     }
 
     /**
@@ -153,7 +153,7 @@ public class ChokerFunction {
     private boolean isWearingChoker(EntityPlayer player) {
         if (player.getCurrentArmor(3) == null)
             return false;
-        return this.getPlayerHeadArmor(player).getItem() instanceof ACCLArmor;
+        return this.getPlayerHeadArmor(player).getItem() instanceof ArmorChoker;
     }
 
     /**
