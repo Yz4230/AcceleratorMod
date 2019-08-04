@@ -12,7 +12,6 @@ import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 import yz.acceleratormod.ACCL;
-import yz.acceleratormod.ChokerFunction;
 import yz.acceleratormod.sound.SoundAtEntity;
 import yz.acceleratormod.sound.SoundManager;
 import yz.acceleratormod.tool.YzUtil;
@@ -25,7 +24,6 @@ public class ArmorChoker extends ItemArmor {
     public static final String activeTag = "active";
     public static final String battRemainTag = "batt_remain";
     public static final String toggleDelayTag = "toggle_delay";
-    private final ChokerFunction chokerFunction = new ChokerFunction();
 
     @SideOnly(Side.CLIENT)
     private IIcon[] iicon = new IIcon[2];
@@ -104,7 +102,7 @@ public class ArmorChoker extends ItemArmor {
             nbt.setInteger(toggleDelayTag, nbt.getInteger(toggleDelayTag) - 1);
         nbt.setInteger(battRemainTag, nbt.getInteger(battRemainTag) - (nbt.getBoolean(activeTag) ? 10 : 1));
         nbt.setInteger(battRemainTag, Math.max(nbt.getInteger(battRemainTag), 0));
-        this.chokerFunction.customTick(world, player, itemStack);
+        ACCL.chokerFunc.customTick(world, player, itemStack);
         itemStack.setTagCompound(nbt);
     }
 

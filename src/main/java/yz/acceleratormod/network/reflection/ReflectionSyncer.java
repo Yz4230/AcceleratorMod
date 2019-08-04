@@ -7,7 +7,7 @@ import io.netty.buffer.ByteBuf;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
-import yz.acceleratormod.ChokerFunction;
+import yz.acceleratormod.ACCL;
 
 public class ReflectionSyncer implements IMessage, IMessageHandler<ReflectionSyncer, IMessage> {
     private int playerID;
@@ -35,7 +35,7 @@ public class ReflectionSyncer implements IMessage, IMessageHandler<ReflectionSyn
     @Override
     public IMessage onMessage(ReflectionSyncer message, MessageContext ctx) {
         Entity targetEntity = Minecraft.getMinecraft().theWorld.getEntityByID(message.entityID);
-        ChokerFunction.flipVelocity(targetEntity.worldObj, targetEntity);
+        ACCL.chokerFunc.flipVelocity(targetEntity.worldObj, targetEntity);
         return null;
     }
 }

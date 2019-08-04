@@ -4,7 +4,7 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent;
 import yz.acceleratormod.network.keymgr.KeyManagerClient;
 
-public class TickHandler {
+public class TickHandlerCommon {
     @SubscribeEvent
     public void onTick(TickEvent event) {
         if (event.side.isClient()) {
