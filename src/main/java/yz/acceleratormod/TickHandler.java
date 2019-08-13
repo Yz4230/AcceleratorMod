@@ -5,10 +5,10 @@ import cpw.mods.fml.common.gameevent.TickEvent;
 import yz.acceleratormod.network.keymgr.KeyManagerClient;
 
 public class TickHandler {
+    private static int keyDelay = 0;
+
     @SubscribeEvent
-    public void onTick(TickEvent event) {
-        if (event.side.isClient()) {
-            ((KeyManagerClient) ACCL.keyManager).sendKeyUpdate();
-        }
+    public void onTick(TickEvent.ClientTickEvent event) {
+        ((KeyManagerClient) ACCL.keyManager).sendKeyUpdate();
     }
 }

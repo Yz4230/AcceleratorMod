@@ -19,5 +19,12 @@
       "name": "acceleratormod:strong_punch",
       "stream": false
     }]
+  },
+  "strong_step": {
+    "category": "master",
+    "sounds": [{
+      "name": "acceleratormod:strong_step",
+      "stream": false
+    }]
   }
 }

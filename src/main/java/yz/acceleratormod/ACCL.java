@@ -15,24 +15,24 @@ import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.util.EnumHelper;
-import yz.acceleratormod.armor.ACCLArmor;
+import yz.acceleratormod.armor.ArmorChoker;
+import yz.acceleratormod.ability.EventHandlerChoker;
+import yz.acceleratormod.item.ItemBattery;
 import yz.acceleratormod.network.PacketHandler;
 import yz.acceleratormod.network.keymgr.KeyManager;
-
-import java.util.Arrays;
 
 @Mod(modid = ACCL.MOD_ID, name = ACCL.MOD_NAME, version = ACCL.MOD_VERSION)
 public class ACCL {
     public static final String MOD_ID = "acceleratormod";
     public static final String MOD_NAME = "Accelerator Mod";
-    public static final String MOD_VERSION = "19.07.14";
+    public static final String MOD_VERSION = "19.08.04";
     public static final ItemArmor.ArmorMaterial CHOKER = EnumHelper.addArmorMaterial("ACC_ARM", 100, new int[]{1, 0, 0, 0}, 0);
     public static final int HELMET = 0;
     public static final ResourceLocation powerBtnSnd = new ResourceLocation(ACCL.MOD_ID, "power_btn");
     public static final ResourceLocation reflectionSnd = new ResourceLocation(ACCL.MOD_ID, "reflection");
     public static final ResourceLocation strongPunchSnd = new ResourceLocation(ACCL.MOD_ID, "strong_punch");
+    public static final ResourceLocation strongStepSnd = new ResourceLocation(ACCL.MOD_ID, "strong_step");
 
     @SidedProxy(clientSide = "yz.acceleratormod.network.keymgr.KeyManagerClient", serverSide = "yz.acceleratormod.network.keymgr.KeyManager")
     public static KeyManager keyManager;
@@ -41,28 +41,22 @@ public class ACCL {
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        choker = new ACCLArmor(CHOKER, HELMET)
+        choker = new ArmorChoker(CHOKER, HELMET)
                 .setMaxStackSize(1)
                 .setCreativeTab(CreativeTabs.tabCombat)
                 .setUnlocalizedName("choker");
         GameRegistry.registerItem(choker, "choker");
-        battery = new Item()
-                .setMaxStackSize(4)
+        battery = new ItemBattery()
+                .setMaxStackSize(1)
                 .setCreativeTab(CreativeTabs.tabRedstone)
-                .setUnlocalizedName("battery")
-                .setTextureName("acceleratormod:battery");
-        GameRegistry.registerItem(battery, "battery");
+                .setUnlocalizedName("battery");
+        //GameRegistry.registerItem(battery, "battery");
 
-        Configuration cfg = new Configuration(event.getSuggestedConfigurationFile(), ACCL.MOD_VERSION, true);
-        cfg.load();
-        String[] entityIdRaw = cfg.getStringList("entity_IDs", "Choker Settings",
-                ChokerFunction.defaultEntityToReflect, "Entity IDs to reflect");
-        ChokerFunction.entityList.addAll(Arrays.asList(ChokerFunction.defaultEntityToReflect));
-        ChokerFunction.entityList.addAll(Arrays.asList(entityIdRaw));
-        cfg.save();
 
         PacketHandler.init();
-        MinecraftForge.EVENT_BUS.register(new ChokerFunction());
+        EventHandlerChoker.loadConfig(event.getSuggestedConfigurationFile());
+        MinecraftForge.EVENT_BUS.register(new EventHandlerChoker());
+        FMLCommonHandler.instance().bus().register(new EventHandlerChoker());
         FMLCommonHandler.instance().bus().register(new TickHandler());
     }
 
@@ -70,22 +64,14 @@ public class ACCL {
     public void init(FMLInitializationEvent event) {
         GameRegistry.addRecipe(new ItemStack(ACCL.choker),
                 "ABC", "B D", "ABE",
-                'A', Items.dye, 'B', Items.string, 'C', Items.iron_ingot,
+                'A', Items.dye, 'B', Items.string, 'C', Items.nether_star,
                 'D', Items.redstone, 'E', Blocks.stone_button);
+
+        GameRegistry.addShapelessRecipe(new ItemStack(ACCL.choker), ACCL.choker, Items.redstone, Items.glowstone_dust);
 
         GameRegistry.addRecipe(new ItemStack(ACCL.battery, 4),
                 " A ", "ABA", " A ",
                 'A', Items.iron_ingot, 'B', Items.redstone);
-        /*try {
-            FileWriter fileWriter = new FileWriter("EntityList.txt");
-            fileWriter.flush();
-            for (Object entity : EntityList.stringToClassMapping.keySet()) {
-                fileWriter.write(entity + "\n");
-            }
-            fileWriter.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }*/
     }
 }
 
