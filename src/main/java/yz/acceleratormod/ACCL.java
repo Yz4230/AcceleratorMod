@@ -15,16 +15,12 @@ import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.util.EnumHelper;
 import yz.acceleratormod.armor.ArmorChoker;
-import yz.acceleratormod.armor.ChokerFunction;
-import yz.acceleratormod.armor.EventHandlerChoker;
+import yz.acceleratormod.ability.EventHandlerChoker;
 import yz.acceleratormod.item.ItemBattery;
 import yz.acceleratormod.network.PacketHandler;
 import yz.acceleratormod.network.keymgr.KeyManager;
-
-import java.util.Arrays;
 
 @Mod(modid = ACCL.MOD_ID, name = ACCL.MOD_NAME, version = ACCL.MOD_VERSION)
 public class ACCL {
@@ -36,7 +32,7 @@ public class ACCL {
     public static final ResourceLocation powerBtnSnd = new ResourceLocation(ACCL.MOD_ID, "power_btn");
     public static final ResourceLocation reflectionSnd = new ResourceLocation(ACCL.MOD_ID, "reflection");
     public static final ResourceLocation strongPunchSnd = new ResourceLocation(ACCL.MOD_ID, "strong_punch");
-    public static final ChokerFunction chokerFunc = new ChokerFunction();
+    public static final ResourceLocation strongStepSnd = new ResourceLocation(ACCL.MOD_ID, "strong_step");
 
     @SidedProxy(clientSide = "yz.acceleratormod.network.keymgr.KeyManagerClient", serverSide = "yz.acceleratormod.network.keymgr.KeyManager")
     public static KeyManager keyManager;
@@ -56,17 +52,12 @@ public class ACCL {
                 .setUnlocalizedName("battery");
         //GameRegistry.registerItem(battery, "battery");
 
-        Configuration cfg = new Configuration(event.getSuggestedConfigurationFile(), ACCL.MOD_VERSION, true);
-        cfg.load();
-        String[] entityIdRaw = cfg.getStringList("entity_IDs", "Choker Settings",
-                EventHandlerChoker.defaultEntityToReflect, "Entity IDs to reflect");
-        EventHandlerChoker.entityList.addAll(Arrays.asList(EventHandlerChoker.defaultEntityToReflect));
-        EventHandlerChoker.entityList.addAll(Arrays.asList(entityIdRaw));
-        cfg.save();
 
         PacketHandler.init();
+        EventHandlerChoker.loadConfig(event.getSuggestedConfigurationFile());
         MinecraftForge.EVENT_BUS.register(new EventHandlerChoker());
         FMLCommonHandler.instance().bus().register(new EventHandlerChoker());
+        FMLCommonHandler.instance().bus().register(new TickHandler());
     }
 
     @EventHandler

@@ -33,8 +33,6 @@ public class YzUtil {
             nbt.setBoolean(ArmorChoker.activeTag, false);
         if (!nbt.hasKey(ArmorChoker.battRemainTag))
             nbt.setInteger(ArmorChoker.battRemainTag, ArmorChoker.battery_capacity);
-        if (!nbt.hasKey(ArmorChoker.toggleDelayTag))
-            nbt.setInteger(ArmorChoker.toggleDelayTag, 10);
     }
 
     private static void setupBattery(NBTTagCompound nbt) {

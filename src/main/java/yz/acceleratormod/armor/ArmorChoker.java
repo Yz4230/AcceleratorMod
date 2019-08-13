@@ -11,7 +11,9 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
+import net.minecraftforge.common.MinecraftForge;
 import yz.acceleratormod.ACCL;
+import yz.acceleratormod.ability.ChokerEvent;
 import yz.acceleratormod.sound.SoundAtEntity;
 import yz.acceleratormod.sound.SoundManager;
 import yz.acceleratormod.tool.YzUtil;
@@ -23,7 +25,6 @@ public class ArmorChoker extends ItemArmor {
 
     public static final String activeTag = "active";
     public static final String battRemainTag = "batt_remain";
-    public static final String toggleDelayTag = "toggle_delay";
 
     @SideOnly(Side.CLIENT)
     private IIcon[] iicon = new IIcon[2];
@@ -80,29 +81,21 @@ public class ArmorChoker extends ItemArmor {
     @Override
     public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) {
         NBTTagCompound nbt = YzUtil.getNBTTag(itemStack);
-        if (ACCL.keyManager.isPowerKeyDown(player) && nbt.getInteger(toggleDelayTag) == 0) {
+        if (ACCL.keyManager.isPowerKeyDown(player)) {
             nbt.setBoolean(activeTag, !nbt.getBoolean(activeTag));
-            nbt.setInteger(toggleDelayTag, 10);
             if (!world.isRemote) {
                 player.addChatComponentMessage(new ChatComponentText("The choker was " + (nbt.getBoolean(activeTag) ? "enabled" : "disabled" + ".")));
                 if (nbt.getBoolean(activeTag))
-                SoundManager.Play(new SoundAtEntity(ACCL.powerBtnSnd, player, 1.F, 1.F));
-            }
-            if (nbt.getBoolean(activeTag)) {
-                player.capabilities.allowFlying = nbt.getBoolean(activeTag);
+                    SoundManager.Play(new SoundAtEntity(ACCL.powerBtnSnd, player, 1.F, 1.F));
             }
         }
-
-        if (player.isSprinting() && nbt.getBoolean(activeTag))
+        if (player.isSprinting() && nbt.getBoolean(activeTag) && !world.isRemote)
             player.capabilities.setPlayerWalkSpeed(0.18F);
         else
             player.capabilities.setPlayerWalkSpeed(0.1F);
-
-        if (nbt.getInteger(toggleDelayTag) > 0)
-            nbt.setInteger(toggleDelayTag, nbt.getInteger(toggleDelayTag) - 1);
         nbt.setInteger(battRemainTag, nbt.getInteger(battRemainTag) - (nbt.getBoolean(activeTag) ? 10 : 1));
         nbt.setInteger(battRemainTag, Math.max(nbt.getInteger(battRemainTag), 0));
-        ACCL.chokerFunc.customTick(world, player, itemStack);
+        MinecraftForge.EVENT_BUS.post(new ChokerEvent(world, player, itemStack));
         itemStack.setTagCompound(nbt);
     }
 

@@ -2,3 +2,6 @@ item.choker.name=チョーカー
 item.battery.name=バッテリー
 key.acceleratormod=Accelerator Mod
 key.choker.power=チョーカーの電源を入れる
+key.choker.function=ファンクションキー
+key.choker.strong_step=強力な足踏み
+key.choker.change_gravity=重力変換
