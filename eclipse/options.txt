@@ -3,15 +3,15 @@ mouseSensitivity:0.5
 fov:0.0
 gamma:1.0
 saturation:0.0
-renderDistance:16
+renderDistance:10
 guiScale:0
 particles:0
 bobView:true
 anaglyph3d:false
 advancedOpengl:false
-maxFps:260
+maxFps:120
 fboEnable:true
-difficulty:0
+difficulty:3
 fancyGraphics:true
 ao:2
 clouds:true
@@ -88,7 +88,7 @@ key_key.hotbar.9:10
 key_key.choker.power:33
 key_key.choker.strong_step:19
 key_key.sprint:29
-key_key.choker.change_gravity:34
+key_key.choker.teleport:20
 soundCategory_master:1.0
 soundCategory_music:0.0
 soundCategory_record:1.0

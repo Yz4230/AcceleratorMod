@@ -1,0 +1,16 @@
+[
+  {
+    "modinfoversion": 1,
+    "modid": "acceleratormod",
+    "name": "Accelerator Mod",
+    "description": "Add Accelerator's Choker.",
+    "version": "1.0",
+    "mcversion": "1.7.10",
+    "url": "https://github.com/Yz4230/AcceleratorMod",
+    "authorList": ["Yz_4230"],
+    "credits": "Accelerator authored by Toaru-Project, This mod authored by Yz_4230",
+    "requiredMods": ["Forge"],
+    "dependencies": ["api"],
+    "useDependencyInformation": true
+  }
+]

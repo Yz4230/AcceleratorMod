@@ -26,5 +26,12 @@
       "name": "acceleratormod:strong_step",
       "stream": false
     }]
+  },
+  "teleport": {
+    "category": "master",
+    "sounds": [{
+      "name": "acceleratormod:teleport",
+      "stream": false
+    }]
   }
 }

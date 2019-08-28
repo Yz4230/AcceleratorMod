@@ -13,7 +13,8 @@ import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 import yz.acceleratormod.ACCL;
-import yz.acceleratormod.ability.ChokerEvent;
+import yz.acceleratormod.choker.ChokerEvent;
+import yz.acceleratormod.choker.ChokerUtil;
 import yz.acceleratormod.sound.SoundAtEntity;
 import yz.acceleratormod.sound.SoundManager;
 import yz.acceleratormod.tool.YzUtil;
@@ -81,7 +82,7 @@ public class ArmorChoker extends ItemArmor {
     @Override
     public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) {
         NBTTagCompound nbt = YzUtil.getNBTTag(itemStack);
-        if (ACCL.keyManager.isPowerKeyDown(player)) {
+        if (ACCL.keyManager.isPowerKeyDown(player) && nbt.getInteger(battRemainTag) > 0) {
             nbt.setBoolean(activeTag, !nbt.getBoolean(activeTag));
             if (!world.isRemote) {
                 player.addChatComponentMessage(new ChatComponentText("The choker was " + (nbt.getBoolean(activeTag) ? "enabled" : "disabled" + ".")));
@@ -89,7 +90,7 @@ public class ArmorChoker extends ItemArmor {
                     SoundManager.Play(new SoundAtEntity(ACCL.powerBtnSnd, player, 1.F, 1.F));
             }
         }
-        if (player.isSprinting() && nbt.getBoolean(activeTag) && !world.isRemote)
+        if (player.isSprinting() && ChokerUtil.isActivated(player) && !world.isRemote)
             player.capabilities.setPlayerWalkSpeed(0.18F);
         else
             player.capabilities.setPlayerWalkSpeed(0.1F);

@@ -7,8 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eeab22d0-007c-4c1b-bd41-7af973a77684" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/ability/ChokerEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/acceleratormod/sounds/strong_step.ogg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/ThrownBlock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/choker/EventHandlerChoker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/choker/abilities/AbilityBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/choker/abilities/AbilityRegistry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/choker/abilities/StrongStep.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/acceleratormod/sounds/teleport.ogg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mcmod.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.2.1/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.2.1/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.2.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.2.1/fileHashes/fileHashes.lock" afterDir="false" />
@@ -16,28 +22,52 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.2.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.2.1/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.2.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.2.1/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/yz.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/yz.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AcceleratorMod.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/AcceleratorMod.ipr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eclipse/config/splash.properties" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/config/splash.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eclipse/logs/fml-client-1.log" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/logs/fml-client-1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eclipse/logs/fml-client-2.log" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/logs/fml-client-2.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eclipse/logs/fml-client-3.log" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/logs/fml-client-3.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eclipse/logs/fml-client-latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/logs/fml-client-latest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eclipse/logs/fml-junk-earlystartup.log" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/logs/fml-junk-earlystartup.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eclipse/logs/latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/logs/latest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/logs/2019-07-24-1.log.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/logs/2019-07-24-2.log.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/logs/2019-07-25-1.log.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/logs/2019-07-25-2.log.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/logs/2019-07-25-3.log.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/logs/2019-07-25-4.log.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/logs/2019-07-25-5.log.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/logs/2019-07-25-6.log.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/logs/2019-07-25-7.log.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/logs/2019-07-26-1.log.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/logs/2019-07-26-2.log.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/logs/2019-07-26-3.log.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/logs/2019-07-26-4.log.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/logs/2019-07-26-5.log.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/logs/2019-07-26-6.log.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/logs/2019-07-26-7.log.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/logs/2019-07-27-1.log.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/logs/2019-07-27-2.log.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/logs/2019-07-27-3.log.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/logs/2019-07-27-4.log.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/logs/2019-07-27-5.log.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/logs/2019-07-27-6.log.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/logs/2019-07-27-7.log.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/logs/fml-client-1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/logs/fml-client-2.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/logs/fml-client-3.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/logs/fml-client-latest.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/logs/fml-junk-earlystartup.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/logs/latest.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/eclipse/options.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/options.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eclipse/usernamecache.json" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/usernamecache.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/ACCL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/ACCL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/TickHandlerCommon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/TickHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/ability/ChokerEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/choker/ChokerEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/ability/ChokerUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/choker/ChokerUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/ability/EventHandlerChoker.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/armor/ArmorChoker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/armor/ArmorChoker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/armor/ChokerFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/ability/ChokerUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/armor/EventHandlerChoker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/ability/EventHandlerChoker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/network/PacketHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/network/PacketHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/network/ability/ReflectionSyncer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/network/ability/ReflectionSyncer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/network/keymgr/KeyManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/network/keymgr/KeyManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/network/keymgr/KeyManagerClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/network/keymgr/KeyManagerClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/network/keymgr/KeyStateSyncer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/network/keymgr/KeyStateSyncer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/network/reflection/ReflectionSyncer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/network/ability/ReflectionSyncer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/tool/YzUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/tool/YzUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/assets/acceleratormod/lang/en_US.lang" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/acceleratormod/lang/en_US.lang" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/assets/acceleratormod/lang/ja_JP.lang" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/acceleratormod/lang/ja_JP.lang" afterDir="false" />
@@ -88,6 +118,12 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="AcceleratorMod" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build setup" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="AcceleratorMod" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="documentation" type="c8890929:TasksNode$1" />
               </path>
               <path>
@@ -100,7 +136,31 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="AcceleratorMod" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="help" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="AcceleratorMod" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="ide" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="AcceleratorMod" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="AcceleratorMod" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="upload" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="AcceleratorMod" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="verification" type="c8890929:TasksNode$1" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
@@ -114,9 +174,13 @@
       </state>
     </system>
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="AcceleratorMod" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -153,28 +217,44 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.side.proportion" value="0.20588236" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="yz.acceleratormod" />
     </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="yz.acceleratormod" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\modding\AcceleratorMod\src\main\resources\assets\acceleratormod\sounds" />
-      <recent name="D:\modding\AcceleratorMod\src\main\resources\assets\acceleratormod\textures\items\battery" />
-      <recent name="D:\modding\AcceleratorMod\src\main\resources\assets\acceleratormod\textures\items\choker" />
-      <recent name="D:\modding\AcceleratorMod\src\main\resources\assets\acceleratormod\textures\armor" />
-      <recent name="D:\modding\AcceleratorMod\src\main\resources\assets\acceleratormod\textures\items" />
+      <recent name="D:\modding\AcceleratorMod\src\main\resources" />
+      <recent name="D:\modding\AcceleratorMod\src\main\java\yz\acceleratormod" />
+      <recent name="D:\modding\AcceleratorMod\src\main" />
+      <recent name="D:\modding\AcceleratorMod\src\main\java" />
+      <recent name="D:\modding\AcceleratorMod\src" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="yz.acceleratormod.choker.abilities" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="yz.acceleratormod.choker.abilities" />
     </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="tree" />
+      <command value="note" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -189,7 +269,37 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="アプリケーション.Minecraft Start">
+    <configuration name="Minecraft Start" type="Application" factoryName="アプリケーション">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="GradleStart" />
+      <module name="AcceleratorMod.main" />
+      <option name="PROGRAM_PARAMETERS" value="--username=&quot;yuzupon1480@gmail.com&quot; --password=&quot;yuzuyuzu1480&quot;" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/eclipse" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AcceleratorMod [genIntellijRuns]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="genIntellijRuns" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="AcceleratorMod [runClient]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -209,9 +319,14 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Gradle.AcceleratorMod [runClient]" />
+      <item itemvalue="Gradle.AcceleratorMod [genIntellijRuns]" />
+      <item itemvalue="アプリケーション.Minecraft Start" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.AcceleratorMod [runClient]" />
+        <item itemvalue="Gradle.AcceleratorMod [genIntellijRuns]" />
         <item itemvalue="Gradle.AcceleratorMod [runClient]" />
         <item itemvalue="Gradle.AcceleratorMod [runClient]" />
         <item itemvalue="Gradle.AcceleratorMod [runClient]" />

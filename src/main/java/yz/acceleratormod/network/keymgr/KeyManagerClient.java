@@ -20,7 +20,7 @@ import java.util.Set;
 public class KeyManagerClient extends KeyManager {
     private final KeyBinding powerKey = new KeyBinding("key.choker.power", Keyboard.KEY_F, "key." + ACCL.MOD_ID);
     private final KeyBinding strongStepKey = new KeyBinding("key.choker.strong_step", Keyboard.KEY_R, "key." + ACCL.MOD_ID);
-    private final KeyBinding changeGravityKey = new KeyBinding("key.choker.change_gravity", Keyboard.KEY_G, "key." + ACCL.MOD_ID);
+    private final KeyBinding teleportKey = new KeyBinding("key.choker.teleport", Keyboard.KEY_T, "key." + ACCL.MOD_ID);
     private final KeyBinding functionKey = Minecraft.getMinecraft().gameSettings.keyBindSprint;
     private final KeyBinding jumpKey = Minecraft.getMinecraft().gameSettings.keyBindJump;
     private int lastKeyState = 0;
@@ -32,7 +32,7 @@ public class KeyManagerClient extends KeyManager {
         ClientRegistry.registerKeyBinding(this.powerKey);
         ClientRegistry.registerKeyBinding(this.strongStepKey);
         ClientRegistry.registerKeyBinding(this.functionKey);
-        ClientRegistry.registerKeyBinding(this.changeGravityKey);
+        ClientRegistry.registerKeyBinding(this.teleportKey);
     }
 
     @SideOnly(Side.CLIENT)
@@ -43,7 +43,7 @@ public class KeyManagerClient extends KeyManager {
             if (GameSettings.isKeyDown(this.powerKey)) this.delayCheck(Key.power, keys, 10);
             if (GameSettings.isKeyDown(this.strongStepKey)) this.delayCheck(Key.step, keys, 10);
             if (GameSettings.isKeyDown(this.functionKey)) this.delayCheck(Key.function, keys, 0);
-            if (GameSettings.isKeyDown(this.changeGravityKey)) this.delayCheck(Key.change_gravity, keys, 0);
+            if (GameSettings.isKeyDown(this.teleportKey)) this.delayCheck(Key.teleport, keys, 20);
             if (GameSettings.isKeyDown(this.jumpKey)) this.delayCheck(Key.jump, keys, 0);
 
             this.keyDelay.replaceAll((k, v) -> v == 0 ? v : v - 1);

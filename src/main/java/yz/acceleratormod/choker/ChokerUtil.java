@@ -1,4 +1,4 @@
-package yz.acceleratormod.ability;
+package yz.acceleratormod.choker;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;

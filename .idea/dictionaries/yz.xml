@@ -5,11 +5,17 @@
       <w>accl</w>
       <w>batt</w>
       <w>chokerfunction</w>
+      <w>coord</w>
       <w>iicon</w>
       <w>keymgr</w>
+      <w>mcversion</w>
+      <w>minecraft</w>
+      <w>modid</w>
+      <w>modinfoversion</w>
       <w>syncer</w>
       <w>teleport</w>
       <w>teleportation</w>
+      <w>toaru</w>
       <w>xyz</w>
     </words>
   </dictionary>

@@ -7,7 +7,7 @@ import io.netty.buffer.ByteBuf;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
-import yz.acceleratormod.ability.ChokerUtil;
+import yz.acceleratormod.choker.ChokerUtil;
 
 public class ReflectionSyncer implements IMessage, IMessageHandler<ReflectionSyncer, IMessage> {
     private int playerID;

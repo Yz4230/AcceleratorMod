@@ -17,7 +17,9 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.EnumHelper;
 import yz.acceleratormod.armor.ArmorChoker;
-import yz.acceleratormod.ability.EventHandlerChoker;
+import yz.acceleratormod.choker.EventHandlerChoker;
+import yz.acceleratormod.choker.abilities.AbilityBase;
+import yz.acceleratormod.choker.abilities.AbilityRegistry;
 import yz.acceleratormod.item.ItemBattery;
 import yz.acceleratormod.network.PacketHandler;
 import yz.acceleratormod.network.keymgr.KeyManager;
@@ -26,13 +28,14 @@ import yz.acceleratormod.network.keymgr.KeyManager;
 public class ACCL {
     public static final String MOD_ID = "acceleratormod";
     public static final String MOD_NAME = "Accelerator Mod";
-    public static final String MOD_VERSION = "19.08.04";
+    public static final String MOD_VERSION = "1.0";
     public static final ItemArmor.ArmorMaterial CHOKER = EnumHelper.addArmorMaterial("ACC_ARM", 100, new int[]{1, 0, 0, 0}, 0);
     public static final int HELMET = 0;
     public static final ResourceLocation powerBtnSnd = new ResourceLocation(ACCL.MOD_ID, "power_btn");
     public static final ResourceLocation reflectionSnd = new ResourceLocation(ACCL.MOD_ID, "reflection");
     public static final ResourceLocation strongPunchSnd = new ResourceLocation(ACCL.MOD_ID, "strong_punch");
     public static final ResourceLocation strongStepSnd = new ResourceLocation(ACCL.MOD_ID, "strong_step");
+    public static final ResourceLocation teleportSnd = new ResourceLocation(ACCL.MOD_ID, "teleport");
 
     @SidedProxy(clientSide = "yz.acceleratormod.network.keymgr.KeyManagerClient", serverSide = "yz.acceleratormod.network.keymgr.KeyManager")
     public static KeyManager keyManager;
@@ -58,6 +61,7 @@ public class ACCL {
         MinecraftForge.EVENT_BUS.register(new EventHandlerChoker());
         FMLCommonHandler.instance().bus().register(new EventHandlerChoker());
         FMLCommonHandler.instance().bus().register(new TickHandler());
+        AbilityRegistry.registerAbilities();
     }
 
     @EventHandler

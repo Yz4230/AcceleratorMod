@@ -1,4 +1,4 @@
-package yz.acceleratormod.ability;
+package yz.acceleratormod.choker;
 
 import cpw.mods.fml.common.eventhandler.Event;
 import net.minecraft.entity.player.EntityPlayer;

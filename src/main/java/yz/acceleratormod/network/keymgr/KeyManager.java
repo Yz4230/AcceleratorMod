@@ -19,8 +19,8 @@ public class KeyManager {
         return this.get(player, Key.function);
     }
 
-    public boolean isChangeGravityKeyDown(EntityPlayer player) {
-        return this.get(player, Key.change_gravity);
+    public boolean isTeleportKeyDown(EntityPlayer player) {
+        return this.get(player, Key.teleport);
     }
 
     public boolean isJumpKeyDown(EntityPlayer player) {
@@ -52,11 +52,11 @@ public class KeyManager {
     }
 
     public enum Key {
+        function,
+        jump,
         power,
         step,
-        function,
-        change_gravity,
-        jump;
+        teleport;
 
         public static int toInt(Iterable<Key> keySet) {
             int ret = 0;
