@@ -18,7 +18,6 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.EnumHelper;
 import yz.acceleratormod.armor.ArmorChoker;
 import yz.acceleratormod.choker.EventHandlerChoker;
-import yz.acceleratormod.choker.abilities.AbilityBase;
 import yz.acceleratormod.choker.abilities.AbilityRegistry;
 import yz.acceleratormod.item.ItemBattery;
 import yz.acceleratormod.network.PacketHandler;

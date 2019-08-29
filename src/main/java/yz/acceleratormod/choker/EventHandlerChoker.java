@@ -1,36 +1,31 @@
 package yz.acceleratormod.choker;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import cpw.mods.fml.common.gameevent.TickEvent;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityFallingBlock;
-import net.minecraft.entity.monster.EntityZombie;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.Timer;
-import net.minecraft.util.*;
+import net.minecraft.util.AxisAlignedBB;
+import net.minecraft.util.DamageSource;
+import net.minecraft.util.Vec3;
 import net.minecraft.world.ChunkPosition;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
-import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.entity.player.AttackEntityEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.world.ExplosionEvent;
 import yz.acceleratormod.ACCL;
-import yz.acceleratormod.network.keymgr.KeyManager;
 import yz.acceleratormod.sound.SoundAtEntity;
 import yz.acceleratormod.sound.SoundManager;
 import yz.acceleratormod.tool.YzUtil;
 
 import java.io.File;
-import java.lang.reflect.Field;
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class EventHandlerChoker {
     private static Set<String> reflectTargets = new HashSet<>();
@@ -49,9 +44,6 @@ public class EventHandlerChoker {
             DamageSource.cactus.damageType,
             DamageSource.inWall.damageType,
             DamageSource.anvil.damageType);
-    private boolean canJump = false;
-    private int jumpKeyTime = 0;
-    private List<Entity> watchList = new ArrayList<>();
 
     public static void loadConfig(File configFile) {
         Configuration cfg = new Configuration(configFile, ACCL.MOD_VERSION, true);
@@ -62,6 +54,7 @@ public class EventHandlerChoker {
         reflectTargets.addAll(Arrays.asList(entityIdRaw));
         cfg.save();
     }
+
 
     @SubscribeEvent
     public void onExplosionDetonate(ExplosionEvent.Detonate event) {
@@ -122,35 +115,10 @@ public class EventHandlerChoker {
     }
 
     @SubscribeEvent
-    public void onEntityJump(LivingEvent.LivingJumpEvent event) {
-        if (event.entity instanceof EntityPlayer) {
-            this.canJump = true;
-            this.jumpKeyTime = 0;
-        }
-    }
-
-    @SubscribeEvent
     public void onPlayerInteract(PlayerInteractEvent event) {
         if (event.action == PlayerInteractEvent.Action.LEFT_CLICK_BLOCK && !event.world.isRemote &&
                 ACCL.keyManager.isFunctionKeyDown(event.entityPlayer) && ChokerUtil.isActivated(event.entityPlayer)) {
             event.world.createExplosion(event.entityPlayer, event.x, event.y, event.z, 5, true);
-        }
-    }
-
-    //@SubscribeEvent
-    @SuppressWarnings("unchecked")
-    public void onWorldTick(TickEvent.WorldTickEvent event) {
-        List entityList = event.world.loadedEntityList;
-        Entity entity;
-        if (event.phase == TickEvent.Phase.START) {
-            for (Object o : entityList) {
-                entity = (Entity) o;
-                if (entity instanceof EntityZombie)
-                    this.watchList.add(entity);
-            }
-            entityList.removeAll(this.watchList);
-        } else {
-            entityList.addAll(this.watchList);
         }
     }
 
@@ -219,28 +187,6 @@ public class EventHandlerChoker {
     }
 
     @SubscribeEvent
-    public void strongStep(ChokerEvent event) {
-        if (ACCL.keyManager.isStepKeyDown(event.player) && event.active && event.player.onGround) {
-            if (event.world.isRemote) {
-                for (int i = 0; i < 600; i++) {
-                    event.world.spawnParticle("explode", event.player.posX, event.player.posY - event.player.getEyeHeight(), event.player.posZ,
-                            Math.random() * 5 - 2.5, Math.random() * 5 - 2.5, Math.random() * 5 - 2.5);
-                }
-            } else {
-                List entityList = event.world.getEntitiesWithinAABB(EntityLivingBase.class, event.player.boundingBox.expand(10, 10, 10));
-                for (Object o : entityList) {
-                    Entity entity = (Entity) o;
-                    if (entity.onGround) {
-                        entity.motionY = 3;
-                        entity.attackEntityFrom(DamageSource.inWall, 10);
-                    }
-                }
-                SoundManager.Play(new SoundAtEntity(ACCL.strongStepSnd, event.player, 1.F, 1.F));
-            }
-        }
-    }
-
-    @SubscribeEvent
     public void teleport(ChokerEvent event) {
         Minecraft mc = Minecraft.getMinecraft();
         if (ACCL.keyManager.isTeleportKeyDown(event.player) && event.active) {
@@ -256,25 +202,6 @@ public class EventHandlerChoker {
 //        } catch (Exception e) {
 //            e.printStackTrace();
 //        }
-    }
-
-    @SubscribeEvent
-    public void gravityJump(ChokerEvent event) {
-        if (event.world.isRemote && event.active) {
-            if (ACCL.keyManager.andKeyDown(event.player, KeyManager.Key.jump, KeyManager.Key.function)) {
-                if (this.canJump && this.jumpKeyTime < 20) {
-                    this.jumpKeyTime++;
-                    event.player.motionY = 1.2F;
-                }
-            } else {
-                this.canJump = false;
-            }
-            if (ACCL.keyManager.isFunctionKeyDown(event.player) && !event.player.onGround && event.player.moveForward > 0) {
-                float f = event.player.rotationYaw * 0.017453292F;
-                event.player.motionX -= MathHelper.sin(f) * 0.2F;
-                event.player.motionZ += MathHelper.cos(f) * 0.2F;
-            }
-        }
     }
 }
 

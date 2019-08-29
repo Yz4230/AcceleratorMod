@@ -1,5 +1,6 @@
 package yz.acceleratormod.choker.abilities;
 
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.DamageSource;
@@ -10,8 +11,8 @@ import yz.acceleratormod.sound.SoundManager;
 
 import java.util.List;
 
-public class StrongStep extends AbilityBase {
-    @Override
+public class AbilityStrongStep {
+    @SubscribeEvent
     public void onUpdate(ChokerEvent event) {
         if (ACCL.keyManager.isStepKeyDown(event.player) && event.active && event.player.onGround) {
             if (event.world.isRemote) {
