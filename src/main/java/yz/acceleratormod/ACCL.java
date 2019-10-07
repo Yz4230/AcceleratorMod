@@ -19,7 +19,6 @@ import net.minecraftforge.common.util.EnumHelper;
 import yz.acceleratormod.armor.ArmorChoker;
 import yz.acceleratormod.choker.EventHandlerChoker;
 import yz.acceleratormod.choker.abilities.AbilityRegistry;
-import yz.acceleratormod.item.ItemBattery;
 import yz.acceleratormod.network.PacketHandler;
 import yz.acceleratormod.network.keymgr.KeyManager;
 
@@ -39,7 +38,6 @@ public class ACCL {
     @SidedProxy(clientSide = "yz.acceleratormod.network.keymgr.KeyManagerClient", serverSide = "yz.acceleratormod.network.keymgr.KeyManager")
     public static KeyManager keyManager;
     public static Item choker;
-    public static Item battery;
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
@@ -48,12 +46,6 @@ public class ACCL {
                 .setCreativeTab(CreativeTabs.tabCombat)
                 .setUnlocalizedName("choker");
         GameRegistry.registerItem(choker, "choker");
-        battery = new ItemBattery()
-                .setMaxStackSize(1)
-                .setCreativeTab(CreativeTabs.tabRedstone)
-                .setUnlocalizedName("battery");
-        //GameRegistry.registerItem(battery, "battery");
-
 
         PacketHandler.init();
         EventHandlerChoker.loadConfig(event.getSuggestedConfigurationFile());
@@ -71,10 +63,6 @@ public class ACCL {
                 'D', Items.redstone, 'E', Blocks.stone_button);
 
         GameRegistry.addShapelessRecipe(new ItemStack(ACCL.choker), ACCL.choker, Items.redstone, Items.glowstone_dust);
-
-        GameRegistry.addRecipe(new ItemStack(ACCL.battery, 4),
-                " A ", "ABA", " A ",
-                'A', Items.iron_ingot, 'B', Items.redstone);
     }
 }
 

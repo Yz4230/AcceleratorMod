@@ -85,10 +85,6 @@ key_key.hotbar.6:7
 key_key.hotbar.7:8
 key_key.hotbar.8:9
 key_key.hotbar.9:10
-key_key.choker.power:33
-key_key.choker.strong_step:19
-key_key.sprint:29
-key_key.choker.teleport:20
 soundCategory_master:1.0
 soundCategory_music:0.0
 soundCategory_record:1.0

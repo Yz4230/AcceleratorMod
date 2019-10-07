@@ -6,15 +6,38 @@
     <option name="CUSTOM_SCOPE_NAME" value="Project and Libraries" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eeab22d0-007c-4c1b-bd41-7af973a77684" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/choker/abilities/AbilityGravityJump.java" afterDir="false" />
+    <list default="true" id="eeab22d0-007c-4c1b-bd41-7af973a77684" name="Default Changelist" comment="Clean ChokerFunction">
+      <change beforePath="$PROJECT_DIR$/.gradle/4.2.1/fileContent/annotation-processors.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.2.1/fileContent/annotation-processors.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.2.1/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.2.1/fileContent/fileContent.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.2.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.2.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.2.1/taskHistory/fileSnapshots.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.2.1/taskHistory/fileSnapshots.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.2.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.2.1/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.2.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.2.1/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/AcceleratorMod.api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/AcceleratorMod.api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/AcceleratorMod.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/AcceleratorMod.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/AcceleratorMod.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/AcceleratorMod.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AcceleratorMod.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AcceleratorMod.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eclipse/config/splash.properties" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/config/splash.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/options.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/options.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/screenshots/2019-07-27_17.24.37.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eclipse/usernamecache.json" beforeDir="false" afterPath="$PROJECT_DIR$/eclipse/usernamecache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forge-1.7.10-10.13.4.1448-1.7.10-changelog.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/ACCL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/ACCL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/armor/ArmorChoker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/armor/ArmorChoker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/choker/EventHandlerChoker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/choker/EventHandlerChoker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/choker/abilities/AbilityBase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/choker/abilities/AbilityRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/choker/abilities/AbilityRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/choker/abilities/StrongStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/choker/abilities/AbilityStrongStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/tool/YzUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yz/acceleratormod/tool/YzUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/acceleratormod/textures/items/battery/battery_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/acceleratormod/textures/items/battery/battery_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/acceleratormod/textures/items/battery/battery_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/acceleratormod/textures/items/battery/battery_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/acceleratormod/textures/items/battery/battery_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/acceleratormod/textures/items/battery/battery_5.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,7 +49,7 @@
     <option name="PARALLEL_COMPILATION" value="true" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="235" />
+    <option name="myElementSize" value="262" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -161,15 +184,17 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.15" />
+    <property name="last_opened_file_path" value="$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.4.1448-1.7.10/start" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15135929" />
     <property name="project.structure.side.proportion" value="0.20588236" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
@@ -182,14 +207,18 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\modding\AcceleratorMod\src\main\resources" />
-      <recent name="D:\modding\AcceleratorMod\src\main\java\yz\acceleratormod" />
-      <recent name="D:\modding\AcceleratorMod\src\main" />
+      <recent name="D:\modding\AcceleratorMod\eclipse\mods" />
+      <recent name="D:\modding\AcceleratorMod\build\libs" />
       <recent name="D:\modding\AcceleratorMod\src\main\java" />
       <recent name="D:\modding\AcceleratorMod\src" />
+      <recent name="D:\modding\AcceleratorMod\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="yz.acceleratormod.choker.abilities" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\modding\AcceleratorMod\eclipse\mods" />
+      <recent name="D:\modding\AcceleratorMod\build\libs" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="yz.acceleratormod.choker.abilities" />
@@ -225,6 +254,25 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="AcceleratorMod [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
     </configuration>
     <configuration name="AcceleratorMod [genIntellijRuns]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -264,17 +312,38 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="AcceleratorMod [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Gradle.AcceleratorMod [runClient]" />
       <item itemvalue="Gradle.AcceleratorMod [genIntellijRuns]" />
+      <item itemvalue="Gradle.AcceleratorMod [build]" />
+      <item itemvalue="Gradle.AcceleratorMod [test]" />
       <item itemvalue="アプリケーション.Minecraft Start" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.AcceleratorMod [runClient]" />
+        <item itemvalue="Gradle.AcceleratorMod [test]" />
+        <item itemvalue="Gradle.AcceleratorMod [build]" />
         <item itemvalue="Gradle.AcceleratorMod [genIntellijRuns]" />
-        <item itemvalue="Gradle.AcceleratorMod [runClient]" />
-        <item itemvalue="Gradle.AcceleratorMod [runClient]" />
-        <item itemvalue="Gradle.AcceleratorMod [runClient]" />
         <item itemvalue="Gradle.AcceleratorMod [runClient]" />
       </list>
     </recent_temporary>
@@ -292,6 +361,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1563975361994</updated>
+      <workItem from="1570117043658" duration="126000" />
+      <workItem from="1570117254185" duration="834000" />
+      <workItem from="1570177735569" duration="3437000" />
+      <workItem from="1570193306871" duration="853000" />
+      <workItem from="1570330246150" duration="806000" />
     </task>
     <task id="LOCAL-00001" summary="Add PacketHandler">
       <created>1564319389216</created>
@@ -351,6 +425,9 @@
     </task>
     <option name="localTasksCounter" value="9" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.cfg" />
@@ -566,6 +643,7 @@
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/AcceleratorMod$Minecraft_Start.ic" NAME="Minecraft Start Coverage Results" MODIFIED="1569592647933" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/AcceleratorMod$AcceleratorMod__runClient_.ic" NAME="AcceleratorMod [runClient] Coverage Results" MODIFIED="1564890804404" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="regexState">

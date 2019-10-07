@@ -5,12 +5,9 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.item.EntityFallingBlock;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.Vec3;
 import net.minecraft.world.ChunkPosition;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
@@ -22,7 +19,6 @@ import net.minecraftforge.event.world.ExplosionEvent;
 import yz.acceleratormod.ACCL;
 import yz.acceleratormod.sound.SoundAtEntity;
 import yz.acceleratormod.sound.SoundManager;
-import yz.acceleratormod.tool.YzUtil;
 
 import java.io.File;
 import java.util.*;
@@ -54,7 +50,6 @@ public class EventHandlerChoker {
         reflectTargets.addAll(Arrays.asList(entityIdRaw));
         cfg.save();
     }
-
 
     @SubscribeEvent
     public void onExplosionDetonate(ExplosionEvent.Detonate event) {
@@ -161,9 +156,14 @@ public class EventHandlerChoker {
         }
     }
 
-    //@SubscribeEvent
+    @SubscribeEvent
     public void reflectEntity(ChokerEvent event) {
         if (event.active) {
+            for (Object o : event.world.getEntitiesWithinAABBExcludingEntity(event.player, event.player.boundingBox.expand(3, 3, 3))) {
+                Entity entity = (Entity) o;
+            }
+        }
+/*        if (event.active) {
             for (Object o : event.world.getEntitiesWithinAABBExcludingEntity(event.player, event.player.boundingBox.expand(32, 32, 32))) {
                 Entity entity = (Entity) o;
                 Vec3 velocity = YzUtil.getVelocity(entity).normalize();
@@ -183,25 +183,7 @@ public class EventHandlerChoker {
                     }
                 }
             }
-        }
-    }
-
-    @SubscribeEvent
-    public void teleport(ChokerEvent event) {
-        Minecraft mc = Minecraft.getMinecraft();
-        if (ACCL.keyManager.isTeleportKeyDown(event.player) && event.active) {
-        }
-//        Field clientTimer = null;
-//        try {
-//            for (Field f : mc.getClass().getDeclaredFields())
-//                if (f.getType() == Timer.class) {
-//                    clientTimer = f;
-//                    clientTimer.setAccessible(true);
-//                }
-//            Objects.requireNonNull(clientTimer).set(mc, new Timer(10.F));
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
+        }*/
     }
 }
 

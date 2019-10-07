@@ -1,5 +1,6 @@
 package yz.acceleratormod.armor;
 
+import cofh.api.energy.IEnergyContainerItem;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -21,8 +22,9 @@ import yz.acceleratormod.tool.YzUtil;
 
 import java.util.List;
 
-public class ArmorChoker extends ItemArmor {
-    public static final int battery_capacity = 72000;
+public class ArmorChoker extends ItemArmor implements IEnergyContainerItem {
+
+    public static final int battery_capacity = 200_000;
 
     public static final String activeTag = "active";
     public static final String battRemainTag = "batt_remain";
@@ -70,13 +72,18 @@ public class ArmorChoker extends ItemArmor {
 
     @Override
     public boolean showDurabilityBar(ItemStack itemStack) {
-        return YzUtil.getNBTTag(itemStack).getInteger(battRemainTag) < battery_capacity;
+        return true;
     }
 
     @Override
     public double getDurabilityForDisplay(ItemStack itemStack) {
         NBTTagCompound nbt = YzUtil.getNBTTag(itemStack);
         return 1. - (double) nbt.getInteger(battRemainTag) / (double) battery_capacity;
+    }
+
+    @Override
+    public boolean getIsRepairable(ItemStack p_82789_1_, ItemStack p_82789_2_) {
+        return false;
     }
 
     @Override
@@ -94,7 +101,7 @@ public class ArmorChoker extends ItemArmor {
             player.capabilities.setPlayerWalkSpeed(0.18F);
         else
             player.capabilities.setPlayerWalkSpeed(0.1F);
-        nbt.setInteger(battRemainTag, nbt.getInteger(battRemainTag) - (nbt.getBoolean(activeTag) ? 10 : 1));
+        nbt.setInteger(battRemainTag, nbt.getInteger(battRemainTag) - (nbt.getBoolean(activeTag) ? 100 : 1));
         nbt.setInteger(battRemainTag, Math.max(nbt.getInteger(battRemainTag), 0));
         MinecraftForge.EVENT_BUS.post(new ChokerEvent(world, player, itemStack));
         itemStack.setTagCompound(nbt);
@@ -109,5 +116,28 @@ public class ArmorChoker extends ItemArmor {
             list.add("Active");
         else
             list.add("Not active");
+    }
+
+    @Override
+    public int receiveEnergy(ItemStack container, int maxReceive, boolean simulate) {
+        NBTTagCompound nbt = YzUtil.getNBTTag(container);
+        nbt.setInteger(battRemainTag, Math.min(battery_capacity, nbt.getInteger(battRemainTag) + Math.min(2000, maxReceive)));
+        return Math.min(2000, maxReceive);
+    }
+
+    @Override
+    public int extractEnergy(ItemStack container, int maxExtract, boolean simulate) {
+        return 0;
+    }
+
+    @Override
+    public int getEnergyStored(ItemStack container) {
+        NBTTagCompound nbt = YzUtil.getNBTTag(container);
+        return nbt.getInteger(battRemainTag);
+    }
+
+    @Override
+    public int getMaxEnergyStored(ItemStack container) {
+        return battery_capacity;
     }
 }

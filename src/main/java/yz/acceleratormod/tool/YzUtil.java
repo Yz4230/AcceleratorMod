@@ -10,7 +10,6 @@ import net.minecraft.world.World;
 import yz.acceleratormod.armor.ArmorChoker;
 import yz.acceleratormod.item.ItemBattery;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -46,7 +45,7 @@ public class YzUtil {
 
     private static void setupBattery(NBTTagCompound nbt) {
         if (!nbt.hasKey(ItemBattery.battRemainTag))
-            nbt.setInteger(ItemBattery.battRemainTag, ItemBattery.battery_capacity);
+            nbt.setInteger(ItemBattery.battRemainTag, 0);
     }
 
     public static Vec3 getVelocity(Entity entity) {
